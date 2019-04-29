@@ -267,7 +267,7 @@ gulp.task(
     gulp.series(
         clean,
         gulp.parallel(styles, templates, svg, sprite, scripts, libs, php, fonts, pic),
-        gulp.parallel(watch, server)
+        // gulp.parallel(watch, server)
     )
 );
 
