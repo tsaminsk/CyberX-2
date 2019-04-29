@@ -2,6 +2,10 @@
     padding: 0 0 100px;
     background: #1e1e1e;
 
+    @include mq(1199) {
+        padding: 0;
+    }
+
     &__title {
         padding: 41px 0 37px;
 
@@ -13,7 +17,7 @@
         }
 
         @include mq(1199) {
-            padding: 4px 0 19px;
+            padding: 4px 0 7px;
 
             h1 {
                 font-size: 28px;
@@ -21,7 +25,7 @@
         }
 
         @include mq(749) {
-            padding: 17px 0 13px;
+            padding: 2px 0 3px;
 
             h1 {
                 font-size: 26px;
@@ -34,6 +38,10 @@
         padding: 15px 13px 0 17px;
         font-size: 0;
         margin: 0 auto;
+
+        @include mq(1199) {
+            padding: 15px 0 0;
+        }
     }
 
     &__data {
@@ -42,12 +50,35 @@
         width: 520px;
         padding: 0 28px 0 0;
         font-size: 0;
+
+        @include mq(1199) {
+            display: block;
+            width: 750px;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        @include mq(749) {
+            width: 100%;
+        }
     }
 
     &__data-head {
         height: 70px;
         font-size: 0;
         overflow: visible;
+
+        @include mq(1199) {
+            width: 445px;
+            height: 51px;
+            padding: 0 0 0 28px;
+        }
+
+        @include mq(749) {
+            width: 100%;
+            height: 97px;
+            padding: 0 15px;
+        }
     }
 
     &__data-title {
@@ -62,6 +93,17 @@
         span {
             color: #bf1e2e;
         }
+
+        @include mq(1199) {
+            width: 165px;
+            font-size: 16px;
+        }
+
+        @include mq(749) {
+            width: 100%;
+            padding: 14px 0 11px;
+            text-align: center;
+        }
     }
 
     &__data-select {
@@ -69,6 +111,11 @@
         vertical-align: top;
         width: calc(100% - 185px);
         padding: 0 0 0 10px;
+
+        @include mq(749) {
+            width: 100%;
+            padding: 0;
+        }
     }
 
     &__select {
@@ -106,6 +153,24 @@
                 transform: scale(1, -1);
             }
         }
+
+        @include mq(1199) {
+
+            &:after {
+                height: 40px;
+            }
+
+            span {
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+
+        @include mq(749) {
+            span {
+                line-height: 38px;
+            }
+        }
     }
 
     &__select-items {
@@ -129,13 +194,24 @@
         position: relative;
         height: 880px;
         overflow: hidden;
+
+        @include mq(1199) {
+            height: auto;
+        }
     }
 
     &__items-wrapp {
         transition: transform 0.75s;
+
+        @include mq(1199) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 1000%;
+        }
     }
 
-    &__items-arrow {
+    &__items-arrow-bottom {
         position: absolute;
         z-index: 12;
         bottom: 0;
@@ -152,6 +228,67 @@
             transition: transform 0.25s;
             cursor: pointer;
         }
+
+        @include mq(1199) {
+            display: none;
+        }
+    }
+
+    &__items-arrow-left,
+    &__items-arrow-right {
+        display: none;
+
+        @include mq(1199) {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            display: inline-block;
+            vertical-align: top;
+            width: 60px;
+            height: 100%;
+            padding: 124px 0 0 21px;
+
+            &:not(.is-active) a {
+                pointer-events: none;
+            }
+            
+            a img:first-child {
+                display: none;
+            }
+
+            &.is-active {
+
+                a img:last-child {
+                    display: none;
+                }
+
+                a img:first-child {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+
+        @include mq(749) {
+            width: 32px;
+            padding: 115px 0 0 7px;
+        }
+    }
+    
+    &__items-arrow-left {
+        left: 0;
+
+        &.is-active {
+            background-image: linear-gradient(to right, rgba(#1e1e1e, 1) 0%, rgba(#1e1e1e, 1) 10%, rgba(#1e1e1e, 0) 100%);
+        }
+    }
+    
+    &__items-arrow-right {
+        right: 0;
+
+        &.is-active {
+            background-image: linear-gradient(to left, rgba(#1e1e1e, 1) 0%, rgba(#1e1e1e, 1) 10%, rgba(#1e1e1e, 0) 100%);
+        }
     }
 
     &__item {
@@ -167,6 +304,17 @@
             .clubs__item-time {
                 background-image: url(./../images/icons/clubs-item-day.png);
             }
+        }
+
+        @include mq(1199) {
+            width: 345px;
+            height: 260px;
+            margin: 10px 15px;
+        }
+
+        @include mq(749) {
+            width: calc(100vw - 30px);
+            margin: 0 15px 10px;
         }
     }
     
@@ -195,11 +343,30 @@
 
     &__item-title {
         padding: 0 30px;
-        font-family: "RoadRadio-Bold";
-        font-size: 30px;
-        line-height: 65px;
-        color: #fff;
         background: rgba(#bf1e2e, 0.85) linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+        
+        a {
+            font-family: "RoadRadio-Bold";
+            font-size: 30px;
+            line-height: 65px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @include mq(1199) {
+            padding: 0 19px;
+
+            a {
+                font-size: 22px;
+            }
+        }
+
+        @include mq(749) {
+            a {
+                font-size: 20px;
+                line-height: 59px;
+            }
+        }
     }
 
     &__item-name {
@@ -207,6 +374,16 @@
         font-family: "Navigo Light";
         font-size: 20px;
         color: #fff;
+
+        @include mq(1199) {
+            padding: 14px 19px 79px;
+            font-size: 16px;
+        }
+
+        @include mq(749) {
+            padding: 14px 19px 85px;
+            font-size: 15px;
+        }
     }
 
     &__item-atr {
@@ -226,6 +403,24 @@
             background-size: auto;
             margin: 0 0 10px;            
         }
+
+        @include mq(1199) {
+            padding: 0 19px;
+            
+            > div {
+                font-size: 15px;
+                margin: 0;
+            }
+        }
+
+        @include mq(749) {
+            padding: 0 10px;
+
+            > div {
+                font-size: 14px;
+                line-height: 15px;
+            }
+        }
     }
 
     &__item-pc {
@@ -235,6 +430,11 @@
     &__item-vip {
         padding: 0 0 0 36px !important;
         background: url(./../images/icons/clubs-item-vip.png) 0 10% no-repeat;
+
+        @include mq(1199) {
+            padding: 0 0 0 62px !important;
+            background-position: 25px 10%;
+        }
     }
 
     &__item-time {
@@ -258,6 +458,22 @@
             height: 100%;
             border-radius: 3px;
             overflow: hidden;
+        }
+
+        @include mq(1199) {
+            display: block;
+            width: auto;
+            height: 380px;
+            padding: 12px 0 0;
+
+            #map {
+                border-radius: 0;
+            }
+        }
+
+        @include mq(749) {
+            height: 305px;
+            padding: 5px 0 0;
         }
     }
 }

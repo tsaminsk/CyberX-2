@@ -10,8 +10,9 @@ window.onload = function () {
     var currentItem = 0;
     var items = $('.clubs__items-wrapp').find('.clubs__item').length;
 
-    if (items > 3) {
-        $('.js-clubs-items-arrow').on('click', function () {
+    //все клубы слайдер вниз-вверх
+    if ($(document).width() >= 1200 && items > 3) {
+        $('.js-clubs-arrow-bottom').on('click', function () {
             if (!$(this).hasClass('mirror-h')) {
                 if (items - currentItem > 6) {
                     currentItem += 3;
@@ -39,6 +40,75 @@ window.onload = function () {
     }
     else {
         $('.js-clubs-items-arrow').css('display', 'none');
+    }
+
+    //все клубы слайдер
+    if ($(document).width() >= 750 && $(document).width() < 1200 && items > 2) {
+        $('.js-clubs-arrow-right').addClass('is-active');
+
+        $('.js-clubs-arrow-right').on('click', function (event) {
+            event.preventDefault();
+            if ( $(this).hasClass('is-active') ) {
+                if ((items - currentItem) === 3) {
+                    currentItem += 1;
+                }
+                else {
+                    currentItem += 2;
+                }
+                (items - currentItem) === 2 ? $(this).removeClass('is-active') : null;
+                $('.js-clubs-arrow-left').addClass('is-active');
+                $('.clubs__items-wrapp').css('transform', 'translate3d(-' + (375 * currentItem) + 'px, 0, 0)');
+            }
+            else {
+                return false;
+            }
+        });
+
+        $('.js-clubs-arrow-left').on('click', function (event) {
+            event.preventDefault();
+            if ($(this).hasClass('is-active')) {
+                if ((items - currentItem) === 2 && (items % 2) === 1) {
+                    currentItem -= 1;
+                    $('.js-clubs-arrow-right').addClass('is-active');
+                } else {
+                    currentItem -= 2;
+                    $('.js-clubs-arrow-right').addClass('is-active');
+                }
+                currentItem === 0 ? $(this).removeClass('is-active') : null;
+                $('.clubs__items-wrapp').css('transform', 'translate3d(-' + (375 * currentItem) + 'px, 0, 0)');
+            } else {
+                return false;
+            }
+        });
+    }
+    else if ($(document).width() < 750 && items >= 2) {
+        $('.js-clubs-arrow-right').addClass('is-active');
+
+        $('.js-clubs-arrow-right').on('click', function (event) {
+            event.preventDefault();
+            if ($(this).hasClass('is-active')) {
+                currentItem += 1;
+                $('.js-clubs-arrow-left').addClass('is-active');
+                (items - currentItem) === 1 ? $(this).removeClass('is-active') : null;
+                $('.clubs__items-wrapp').css('transform', 'translate3d(-' + (375 * currentItem) + 'px, 0, 0)');
+            } 
+            else {
+                return false;
+            }
+        });
+
+        $('.js-clubs-arrow-left').on('click', function (event) {
+            event.preventDefault();
+            if ($(this).hasClass('is-active')) {
+                currentItem -= 1;
+                $('.js-clubs-arrow-right').addClass('is-active');
+                currentItem === 0 ? $(this).removeClass('is-active') : null;
+                $('.clubs__items-wrapp').css('transform', 'translate3d(-' + (375 * currentItem) + 'px, 0, 0)');
+            }
+            else {
+                return false;
+            }
+        });
     }
 
     
