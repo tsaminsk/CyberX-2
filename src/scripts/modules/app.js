@@ -2,11 +2,43 @@ window.onload = function () {
 
     //все клубы селект
     $('.js-clubs-select').on('click', function() {
-        
-        $(this).toggleClass('is-open');
+        $(this).toggleClass('is-open').find('.clubs__select-items').slideToggle(250);
     }).find('.clubs__select-items p').on('click', function() {
         $('.js-clubs-select').find('span').text($(this).text())
     });
+
+    var currentItem = 0;
+    var items = $('.clubs__items-wrapp').find('.clubs__item').length;
+
+    if (items > 3) {
+        $('.js-clubs-items-arrow').on('click', function () {
+            if (!$(this).hasClass('rotate180')) {
+                if (items - currentItem > 6) {
+                    currentItem += 3;
+                }
+                else if (items - currentItem > 3 && items - currentItem <= 5 || items - currentItem < 3) {
+                    currentItem += items % 3;
+                    currentItem >= items - 3 ? $(this).addClass('rotate180') : null;
+                }
+
+            }
+            else {
+                if (currentItem >= 6) {
+                    currentItem -= items % 3;
+                } 
+                else if (currentItem > 3 && currentItem <= 5) {
+                    currentItem = 3;
+                }
+                else {
+                    currentItem = 0;
+                    $(this).removeClass('rotate180');
+                }
+            }
+            $('.clubs__items-wrapp').css('transform', 'translate3d(0, -' + (297 * currentItem) + 'px, 0)');
+        });
+    }
+
+    
  
     // блок новости 
     // let newsItems = $('.js-news-items').find('.news__item');
