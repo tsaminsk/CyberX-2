@@ -1,5 +1,13 @@
 window.onload = function () {
 
+    //все клубы селект
+    $('.js-clubs-select').on('click', function() {
+        
+        $(this).toggleClass('is-open');
+    }).find('.clubs__select-items p').on('click', function() {
+        $('.js-clubs-select').find('span').text($(this).text())
+    });
+ 
     // блок новости 
     // let newsItems = $('.js-news-items').find('.news__item');
     // for (let i = 0; i < newsItems.length; i++) {

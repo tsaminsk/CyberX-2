@@ -8,10 +8,15 @@ section.clubs
             .clubs__data-head
                 .clubs__data-title 7 клубов <span>CyberX</span>
                 .clubs__data-select
-                    select(value="Москва")
-                        options Москва
-                        options С-Петербург
-                        options Иркутск
+                    .clubs__select.js-clubs-select
+                        span выберите город
+                        .clubs__select-items
+                            p Москва
+                            p Питер
+                            p Иркутск
+                            p Москва
+                            p Питер
+                            p Иркутск
             .clubs__items
                 .clubs__item.is-day
                     .clubs__item-img(style="background-image: url(assets/images/clubs-item-1.png);" alt="")
