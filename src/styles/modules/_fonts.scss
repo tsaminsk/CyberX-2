@@ -1,0 +1,136 @@
+// @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+//     $src: null;
+
+//     $extmods: (eot: '?',
+//         svg: '#'+ str-replace($name, ' ', '_'));
+
+//     $formats: (otf: 'opentype',
+//         ttf: 'truetype'
+//         );
+
+//     @each $ext in $exts {
+//         $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+//         $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+//         $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+//     }
+
+//     @font-face {
+//         font-family: quote($name);
+//         font-style: $style;
+//         font-weight: $weight;
+//         src: $src;
+//     }
+// }
+
+// @include font-face('Имя',
+// './../fonts/имя',
+// жирность,
+// начертание,
+// $exts: расширение);
+
+// @mixin имя($style) {
+//     font-family: 'Имя', альтернатива, семейство;
+
+//     @if $style==слово {
+//         font-weight: жирность;
+//         font-style: начертание;
+//     }
+// }
+
+@font-face {
+    font-family: "RoadRadio-Black";
+    src: url("../fonts/RoadRadio/RoadRadio-Black.woff") format("woff"), url("../fonts/RoadRadio/RoadRadio-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "RoadRadio-Bold";
+    src: url("../fonts/RoadRadio/RoadRadio-Bold.woff") format("woff"), url("../fonts/RoadRadio/RoadRadio-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "RoadRadio";
+    src: url("../fonts/RoadRadio/RoadRadio.woff") format("woff"), url("../fonts/RoadRadio/RoadRadio.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "RoadRadio-Light";
+    src: url("../fonts/RoadRadio/RoadRadio-Light.woff") format("woff"), url("../fonts/RoadRadio/RoadRadio-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "RoadRadio-Thin";
+    src: url("../fonts/RoadRadio/RoadRadio-Thin.woff") format("woff"), url("../fonts/RoadRadio/RoadRadio-Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Navigo Black";
+    src: url("../fonts/navigo/Navigo_Black.woff") format("woff"),
+        url("../fonts/navigo/Navigo_Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Navigo Bold";
+    src: url("../fonts/navigo/Navigo_Bold.woff") format("woff"),
+        url("../fonts/navigo/Navigo_Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Navigo Medium";
+    src: url("../fonts/navigo/Navigo_Medium.woff") format("woff"),
+        url("../fonts/navigo/Navigo_Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Navigo Regular";
+    src: url("../fonts/navigo/Navigo_Regular.woff") format("woff"),
+        url("../fonts/navigo/Navigo_Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Navigo Light";
+    src: url("../fonts/navigo/Navigo_Light.woff") format("woff"),
+        url("../fonts/navigo/Navigo_Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Navigo ExtraLight";
+    src: url("../fonts/navigo/Navigo_ExtraLight.woff") format("woff"),
+        url("../fonts/navigo/Navigo_ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Navigo Thin";
+    src: url("../fonts/navigo/Navigo_Thin.woff") format("woff"),
+        url("../fonts/navigo/Navigo_Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "9928";
+    src: url("../fonts/9928.ttf") format("opentype"),
+        url("../fonts/9928.woff2") format("woff2");
+    font-style: normal
+}

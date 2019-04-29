@@ -1,0 +1,11 @@
+extends ../_template
+
+block variables
+	- var title = "Новости CyberX"
+
+	append sharedVars
+		- var pageUrl = '/news.html'
+	
+
+block content
+	include ./../modules/_news

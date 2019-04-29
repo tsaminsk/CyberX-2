@@ -1,0 +1,32 @@
+.contacts
+    .contacts__crumbs
+        +breadCrumbs(crumbsContacts, crumbsContactsClassName)
+    .contacts__title
+        h1 Контакты
+    .contacts__content
+        .contacts__left
+            .contacts__item
+                .contacts__item-image
+                    img(src="assets/images/icons/point.png" alt="")
+                .contacts__item-text
+                    | Москва, <br> улица Архитектора Власова,&nbsp;55
+            .contacts__item
+                .contacts__item-image
+                    img(src="assets/images/icons/phone-red.png" alt="")
+                .contacts__item-text
+                    a(href="tel:8-499-288-27-35") 8-499-288-27-35
+            .contacts__item
+                .contacts__item-image
+                    img(src="assets/images/icons/mail.png" alt="")
+                .contacts__item-text
+                    a(href="mailto:info@cyberx-franchise.ru") info@cyberx-franchise.ru
+            .contacts__minimap
+                img(src="assets/images/contacts-map.png" alt="")
+        .contacts__right
+            p ООО "РИКИС"
+            p ИНН: 2368010296
+            p Почтовый адрес: 352630, Краснодарский кр, город Белореченск, район Белореченский, улица Интернациональная, дом 30
+            p ОГРН: 1182375044697
+
+    .contacts__map
+        #map

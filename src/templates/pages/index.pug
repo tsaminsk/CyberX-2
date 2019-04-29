@@ -1,0 +1,14 @@
+extends ../_template
+
+block variables
+	- var title = "Главная страница"
+	- var scriptLink = "https://api-maps.yandex.ru/2.1/?load=package.standard&lang=ru-RU"
+	append sharedVars
+		- var pageUrl = '/'
+	append sharedVars
+		- var headerClass = 'header__home'
+
+block content
+	include ./../modules/_slider
+	include ./../modules/_about
+	

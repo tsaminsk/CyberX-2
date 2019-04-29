@@ -1,0 +1,58 @@
+$desktops: 1569px;
+$laptops: 1199px;
+$tablets: 749px;
+$phones: 320px;
+
+@function rem($pixels) {
+    @return #{$pixels / 16px}rem;
+}
+
+@mixin below($width, $orientation: 'width') {
+    @media screen and (max-#{$orientation}: $width) {
+        @content;
+    }
+}
+
+@mixin above($width, $orientation: 'width') {
+    @media screen and (min-#{$orientation}: $width) {
+        @content;
+    }
+}
+
+@mixin between($minWidth, $maxWidth, $orientation: 'width') {
+    @media screen and (min-#{$orientation}: $minWidth) and (max-#{$orientation}: $maxWidth) {
+        @content;
+    }
+}
+
+@mixin mq($from, $to: false) {
+    @if $to {
+        @media (min-width: #{$from}px) and (max-width: #{$to}px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (max-width: #{$from}px) {
+            @content;
+        }
+    }
+}
+
+
+@import "./common/_normalize.scss";
+
+@import "./modules/_fonts.scss";
+@import "./modules/_layout.scss";
+
+@import "./modules/_header.scss";
+@import "./modules/_footer.scss";
+@import "./modules/_slider.scss";
+@import "./modules/_bread-crumbs.scss";
+
+
+@import "./pages/_index.scss";
+@import "./pages/_clubs.scss";
+@import "./pages/_services.scss";
+@import "./pages/_news.scss";
+@import "./pages/_contacts.scss";

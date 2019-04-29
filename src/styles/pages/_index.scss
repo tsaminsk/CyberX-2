@@ -1,0 +1,741 @@
+.about {
+
+    &__logo {
+        padding: 47px 0 57px 4px;
+        background-color: #e9e9e9;
+        text-align: center;
+
+        @include mq(1199) {
+            padding: 20px 0 16px 0px;
+
+            img {
+                width: 345px;
+            }
+        }
+
+        @include mq(749) {
+            padding: 17px 0 19px;
+
+            img {
+                width: 160px;
+            }
+        }
+    }
+
+    &__title {
+        padding: 32px 0 33px 11px;
+        color: #fff;
+        text-align: center;
+        background-color: #851622;
+
+        h2 {
+            font-family: "RoadRadio-Bold";
+            font-size: 30px;
+            margin: 0 0 16px;
+        }
+
+        p {
+            font-family: "RoadRadio-Light";
+            font-size: 25px;
+        }
+
+        @include mq(1199) {
+            padding: 23px 0 24px 8px;
+
+            h2 {
+                max-width: 750px;
+                font-size: 25px;
+                margin: 0 auto 9px;
+            }
+
+            p {
+                max-width: 750px;
+                font-size: 20px;
+                margin: 0 auto;
+            }
+        }
+
+        @include mq(749) {
+            padding: 19px 0 23px 8px;
+
+            h2 {
+                font-size: 22px;
+                line-height: 26px;
+                margin: 0 auto 10px;
+            }
+
+            p {
+                font-size: 19px;
+            }
+        }
+    }
+
+    &__formats {
+        position: relative;
+        background: url(./../images/formats-bg.png) center center no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    &__formats-title {
+        padding: 43px 0 20px;
+        font-family: "9928";
+        font-size: 35px;
+        color: #fff;
+        text-align: center;
+
+        @include mq(1199) {
+            padding: 40px 0 3px;
+            font-size: 28px;
+        }
+
+        @include mq(749) {
+            padding: 30px 0 2px;
+            font-size: 26px;
+        }
+    }
+
+    &__formats-items,
+    &__preferens-items {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 1320px;
+        margin: 0 auto;
+
+        @include mq(1199) {
+            width: 300%;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    &__formats-item {
+        width: 390px;
+        background: center center no-repeat;
+        background-size: cover;
+        border: 1px solid #851622;
+        margin: 20px 0 79px;
+
+        @include mq(1199) {
+            width: 716px;
+
+            border-radius: 5px;
+            margin: 20px calc(50vw - 358px) 40px;
+        }
+
+        @include mq(749) {
+            width: calc(100vw - 34px);
+            margin: 20px 17px 35px;
+        }
+    }
+
+    &__formats-item--title {
+        padding: 24px 0 20px;
+        font-family: "RoadRadio";
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        background: rgba(#88222b, 0.85);
+
+        @include mq(1199) {
+            padding: 14px 10px;
+            font-size: 20px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include mq(749) {
+            padding: 4px 10px 6px;
+        }
+    }
+
+    &__formats-item--content {
+        height: 364px;
+        padding: 260px 40px 0;
+        font-family: "Navigo ExtraLight";
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 60%);
+
+        @include mq(1199) {
+            height: 207px;
+            padding: 140px 67px 0;
+            font-size: 16px;
+        }
+
+        @include mq(749) {
+            height: 219px;
+            padding: 113px 28px 0;
+        }
+    }
+
+    &__formats-arrow-left,
+    &__formats-arrow-right,
+    &__preferens-arrow-left,
+    &__preferens-arrow-right {
+        display: none;
+
+        @include mq(1199) {
+            position: absolute;
+            top: 214px;
+            display: inline-block;
+            vertical-align: top;
+            width: 45px;
+        }
+
+        @include mq(749) {
+            top: 208px;
+        }
+    }
+
+    &__formats-arrow-left,
+    &__preferens-arrow-left {
+        left: calc(50% - 375px);
+
+        @include mq(749) {
+            left: -7px;
+        }
+    }
+
+    &__formats-arrow-right,
+    &__preferens-arrow-right {
+        right: calc(50% - 375px);
+
+        @include mq(749) {
+            right: -7px;
+        }
+    }
+
+    &__preferens {
+        position: relative;
+        padding: 0 0 36px;
+        background: url(./../images/preferens-bg.png) center bottom no-repeat;
+        overflow: hidden;
+
+        @include mq(1199) {
+            padding: 0 0 2px;
+        }
+    }
+
+    &__preferens-title {
+        height: 303px;
+        padding: 67px 0 0 6px;
+        font-family: "9928";
+        font-size: 35px;
+        color: #000;
+        text-align: center;
+        background-color: #fff;
+        margin: 0 0 -144px;
+
+        @include mq(1199) {
+            height: 229px;
+            padding: 34px 0 3px;
+            font-size: 28px;
+            margin: 0 0 -160px;
+        }
+
+        @include mq(749) {
+            height: 223px;
+            padding: 29px 0 3px;
+        }
+    }
+
+    &__preferens-item {
+        width: 390px;
+        height: 500px;
+
+        @include mq(1199) {
+            width: 716px;
+            height: 340px;
+            margin: 20px calc(50vw - 358px);
+        }
+
+        @include mq(749) {
+            width: calc(100vw - 15px);
+            height: 420px;
+            margin: 20px 15px;
+        }
+    }
+
+    &__preferens-item_img-wrapp {
+        height: 320px;
+        padding: 1px;
+        border-radius: 3px;
+        background-image: linear-gradient(to top, #ffbdbe, #bf1e2e);
+
+        @include mq(1199) {
+            height: 260px;
+        }
+
+        @include mq(749) {
+            height: 300px;
+        }
+    }
+
+    &__preferens-item_img {
+        height: 318px;
+        border-radius: 3px;
+        background: center center no-repeat;
+        background-size: cover;
+
+        @include mq(1199) {
+            height: 258px;
+        }
+
+        @include mq(749) {
+            height: 298px;
+        }
+    }
+
+    &__preferens-item_text {
+        padding: 25px 17px 0;
+        font-family: "Navigo Light";
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+
+        @include mq(1199) {
+            padding: 14px 65px 0;
+            font-size: 16px;
+        }
+
+        @include mq(749) {
+            padding: 14px 0 0;
+        }
+    }
+
+    &__more {
+        padding: 0 0 80px;
+        ;
+        background: url(./../images/more-bg.png) center center no-repeat;
+        background-size: cover;
+
+        @include mq(1199) {
+            padding: 0 0 39px;
+        }
+    }
+
+    &__more-title {
+        padding: 77px 0 52px;
+        font-family: "9928";
+        font-size: 35px;
+        color: #fff;
+        text-align: center;
+
+        @include mq(1199) {
+            padding: 30px 0 23px;
+            font-size: 28px;
+        }
+    }
+
+    &__more-context {
+        width: 90%;
+        max-width: 1270px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 13px 3px rgba(#851622, 0.85);
+        margin: 0 auto;
+
+        @include mq(1199) {
+            max-width: 720px;
+        }
+    }
+
+    &__more-top {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border: 1px solid #cd707c;
+        border-bottom: none;
+        background: rgba(#851622, 0.85);
+    }
+
+    &__more-context_logo {
+        padding: 19px 0 0;
+        text-align: center;
+
+        @include mq(1199) {
+            padding: 21px 0 1px;
+
+            img {
+                width: 190px;
+            }
+        }
+    }
+
+    &__more-context_separator {
+        width: 260px;
+        padding: 0;
+        border: none;
+        height: 1px;
+        background-image: linear-gradient(to left, rgba(#fff, 0), rgba(#fff, 0.75), rgba(#fff, 0));
+        color: #fff;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    &__more-context_title {
+        padding: 0 0 12px;
+        font-family: "RoadRadio-Bold";
+        font-size: 27px;
+        color: #fff;
+        text-align: center;
+
+        @include mq(1199) {
+            padding: 3px 15px 18px;
+            font-size: 20px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__more-bottom {
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 1px solid #851622;
+        border-bottom: none;
+        background-color: rgba(#fff, 0.8);
+    }
+
+    &__more-context_text {
+        padding: 24px 42px 10px;
+        font-family: "Navigo Light";
+        font-size: 20px;
+        color: #000;
+        text-align: center;
+
+        p {
+            padding: 0 0 14px;
+        }
+
+        @include mq(1199) {
+            padding: 24px 33px 0px;
+            font-size: 16px;
+
+        }
+    }
+
+    &__photos {
+        padding: 0 0 80px;
+        background: url(./../images/about-photo-bg.png) center center no-repeat;
+        background-size: cover;
+
+        @include mq(1199) {
+            padding: 0 0 35px;
+        }
+    }
+
+    &__photos-title {
+        padding: 79px 0 42px;
+        font-family: "9928";
+        font-size: 35px;
+        color: #000;
+        text-align: center;
+
+        @include mq(1199) {
+            padding: 35px 0 23px;
+            font-size: 28px;
+        }
+
+        @include mq(749) {
+            padding: 26px 0 22px;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        width: 1012px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        @include mq(1199) {
+            width: 720px;
+        }
+
+        @include mq(749) {
+            width: 100%;
+        }
+    }
+
+    &__slider-items {
+        width: 400%;
+        font-size: 0;
+        transform: translate3d(0, 0, 0);
+    }
+
+    &__slider-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+    }
+
+    &__slider-item_img {
+        border-radius: 5px;
+        border: 1px solid #851622;
+        margin: 0 0 8px;
+        overflow: hidden;
+
+        img {
+            min-width: 100%;
+        }
+
+        @include mq(1199) {
+            margin: 0 0 10px;
+
+            img {
+                height: 298px;
+                min-height: 298px;
+            }
+        }
+
+        @include mq(749) {
+            width: calc(100% - 30px);
+            margin: 0 auto 10px;
+        }
+    }
+
+    &__slider-item_context {
+        height: 42px;
+        font-family: "RoadRadio-Thin";
+        font-size: 18px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        background-color: #a22431;
+
+        @include mq(1199) {
+            font-size: 16px;
+        }
+
+        @include mq(749) {
+            height: 34px;
+            font-size: 14px;
+            line-height: 34px;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    &__slider-arrow-left,
+    &__sliderarrow-right {
+        position: absolute;
+        top: 210px;
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+
+        a img:last-child {
+            display: none;
+        }
+
+        @include mq(1199) {
+            top: 135px;
+
+            a img:last-child {
+                display: inline-block;
+            }
+
+            a img:first-child {
+                display: none;
+            }
+        }
+    }
+
+    &__slider-arrow-left {
+        left: 35px;
+
+        @include mq(1199) {
+            left: -15px;
+        }
+    }
+
+    &__sliderarrow-right {
+        right: 28px;
+
+        @include mq(1199) {
+            right: -17px;
+        }
+    }
+
+    &__numbers {
+        padding: 0 0 45px;
+        background: url(./../images/about-num-bg.png) center center no-repeat;
+        background-size: cover;
+
+        @include mq(1199) {
+            padding: 0 0 20px;
+        }
+
+        @include mq(749) {
+            padding: 0 0 15px;
+        }
+    }
+
+    &__numbers-title {
+        padding: 62px 0;
+        font-family: "9928";
+        font-size: 35px;
+        color: #fff;
+        text-align: center;
+
+        img {
+            transform: translate3d(23px, 10px, 0);
+            margin: 0 45px 0 0;
+        }
+
+        @include mq(1199) {
+            padding: 22px 0 28px;
+            font-size: 28px;
+
+            img {
+                width: 200px;
+                transform: translate3d(6px, 7px, 0);
+                margin: 0 21px 0 0;
+            }
+        }
+
+        @include mq(749) {
+            padding: 22px 0 35px;
+
+            img {
+                margin: 0;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__numbers-items {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        max-width: 1320px;
+        margin: 0 auto;
+
+        @include mq(1199) {
+            max-width: 720px;
+        }
+    }
+
+    &__numbers-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 340px;
+        margin: 0 auto 27px;
+
+        @include mq(1199) {
+            width: 220px;
+            margin: 0 auto 15px;
+        }
+    }
+
+    &__numbers-item_img {
+        height: 120px;
+        text-align: center;
+
+        @include mq(1199) {
+            height: 74px;
+
+            img {
+                height: 71px;
+            }
+        }
+    }
+
+    &__numbers-item_num {
+        position: relative;
+        height: 59px;
+        padding: 16px 0 0;
+        font-family: "Navigo Medium";
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+        background-image: linear-gradient(to bottom, #86212b 0px, #86212b 2px, rgba(#86212b, 0) 4px, #86212b 4px);
+        margin: 10px 0 0;
+
+        span {
+            display: inline-block;
+            vertical-align: top;
+            margin: 4px 0 0;
+        }
+
+        @include mq(1199) {
+            height: 38px;
+            padding: 9px 0 0;
+            font-size: 20px;
+            background-image: linear-gradient(to bottom, #86212b 0px, #86212b 1px, rgba(#86212b, 0) 3px, #86212b 3px);
+        }
+    }
+
+    &__numbers-item_text {
+        padding: 8px 0 0;
+        font-family: "RoadRadio";
+        font-size: 23px;
+        line-height: 29px;
+        color: #fff;
+        text-align: center;
+
+        @include mq(1199) {
+            padding: 6px 0 0;
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+
+    &__map-title {
+        padding: 61px 0 52px 26px;
+        font-family: "9928";
+        font-size: 35px;
+        color: #000;
+        text-align: center;
+        background-color: #fff;
+
+        img {
+            transform: translate3d(0, 10px, 0);
+            margin: 0 0 0 14px;
+        }
+
+        @include mq(1199) {
+            padding: 22px 0 28px;
+            font-size: 28px;
+
+            img {
+                width: 200px;
+                transform: translate3d(-8px, 7px, 0);
+                margin: 0 0 0 21px;
+            }
+        }
+
+        @include mq(749) {
+            padding: 28px 0 27px;
+        }
+    }
+
+    &__map-wrapp {
+        height: 500px;
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include mq(1199) {
+            height: 300px;
+        }
+    }
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(100%);
+}

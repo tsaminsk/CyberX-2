@@ -1,0 +1,189 @@
+.header {
+    height: 105px;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    margin: 0 0 -5px;
+    
+    &__decor {
+        position: absolute;
+        z-index: 1;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #BF1E2E;
+
+        @include mq(1199) {
+            top: 82px;
+            left: calc(50% - 375px);
+            width: 750px;
+        }
+
+        @include mq(749) {
+            width: 100%;
+            left: 0;
+        }
+
+    
+        @include mq(749) {
+            display: none;
+        }
+    }
+
+    @include mq(1199) {
+        margin: 0;
+    }
+
+    &__home {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 105px;
+        background-color: rgba(0,0,0, 0);
+    }
+    
+
+    @include mq(1199) {
+        height: 82px;
+        border-bottom: none;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1560px;
+        height: 100%;
+        padding: 0 16px;
+        margin: 0 auto;
+        
+        @include mq(1199) {
+            height: 82px;
+            max-width: 750px;
+        }
+
+        @include mq(749) {
+            padding: 0 15px;
+        }
+    }
+
+    &__mobile {
+        display: none;
+
+        @include mq(1199) {
+            display: block;
+            padding: 36px 0 0;
+        }
+
+        @include mq(749) {
+            padding: 31px 0 0;
+        }
+    }
+
+    &__nuv {
+        display: flex;
+        justify-content: space-around;
+        width: 61%;
+        height: 100px;
+        margin: 0 auto;
+
+        @include mq(1199) {
+            display: none;
+        }
+    }
+
+    &__nuv li {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        line-height: 100px;
+        padding: 0 10px;
+        list-style: none;
+        opacity: 0.99;
+
+        a {
+            font-family: "RoadRadio";
+            font-size: 18px;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        &.is-active {
+
+            a {
+                color: #be1e2e
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 107%;
+                background: url(./../images/icons/nuv-active.png) center center no-repeat;
+                background-size: auto 100%;
+            }
+        }
+    }
+
+    &__logo {
+       padding: 25px 0 0;
+
+        @include mq(1199) {
+            padding: 15px 0 0 46px;
+
+            img {
+                width: 185px;
+            }
+        }
+
+        @include mq(749) {
+            padding: 18px 0 0 23px;
+
+            img {
+                width: 159px;
+            }
+        }
+    }
+
+    &__phone {
+        padding: 7px 0;
+
+        a {
+            display: inline-block;
+            vertical-align: top;
+            font-family: "RoadRadio";
+            font-size: 18px;
+            line-height: 86px;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            
+            img {
+                margin: 2px -15px 0 -7px;
+            }
+        }
+
+        @include mq(1199) {
+            padding: 0 19px 0 0;
+            a:not(.phone) {
+                display: none;
+            }
+        }
+
+        @include mq(749) {
+            padding: 0;
+
+            a img {
+                margin: -2px -19px 0 -7px;
+            }
+        }
+    }
+}

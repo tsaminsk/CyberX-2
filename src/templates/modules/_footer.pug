@@ -1,0 +1,47 @@
+footer.footer
+    .footer__top
+        .container
+            a(href="#") Реквизиты
+    .footer__content
+        .footer__main
+            .container
+                .footer__contacts
+                    h4 Контакты
+                    .footer__contacts-item
+                        .footer__contacts-item--image
+                            img(src="assets/images/icons/point.png" alt="")
+                        .footer__contacts-item--text
+                            | Москва, <br> улица Архитектора Власова, 55
+                    .footer__contacts-item
+                        .footer__contacts-item--image
+                            img(src="assets/images/icons/phone-red.png" alt="")
+                        .footer__contacts-item--text
+                            a(href="tel:8-499-288-27-35") 8-499-288-27-35
+                    .footer__contacts-item
+                        .footer__contacts-item--image
+                            img(src="assets/images/icons/mail.png" alt="")
+                        .footer__contacts-item--text
+                            a(href="mailto:info@cyberx-franchise.ru") info@cyberx-franchise.ru
+                    .footer__contacts-soc
+                        a(href="#") 
+                            img(src="assets/images/icons/soc.png" alt="")
+                .footer__feedback
+                    h4 Обратная связь
+                    form.footer__form.ajax_form(action="#" method="post")
+                        .form-inputs-col
+                            input(type="text" id="form-name" name="name" placeholder="ФИО" value="")
+                            input(type="email" class="is-error" id="form-email" name="email" placeholder="EMAIL" value="")
+                        .form-inputs-col
+                            input(type="tel" class="phone_mask" id="form-phone" name="phone" placeholder="Номер вашего телефона"  value="")
+                            textarea(type="text" id="fort-text" name="text" placeholder="ТЕКСТ СООБЩЕНИЯ") 
+                        .form-submit
+                            button(type="submit" class="is-disabled") Отправить
+        .footer__bottom
+            .container
+                .footer__copy
+                    | © 2016–2019 ООО "РИКИС". Все права защищены
+                .footer__desiner
+                    a(href="#") Автор дизайна
+                
+
+    

@@ -1,0 +1,182 @@
+.contacts {
+    background-color: #f2f2f2;
+
+    &__title {
+        padding: 42px 0 38px;
+
+        h1 {
+            font-family: "9928";
+            font-size: 35px;
+            color: #000;
+            text-align: center;
+        }
+
+        @include mq(1199) {
+            padding: 4px 0 19px;
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        @include mq(749) {
+            padding: 17px 0 13px;
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 1100px;
+        padding: 0 0 35px;
+        font-size: 0;
+        margin: 0 auto;
+
+        @include mq(1199) {
+            max-width: 750px;
+            padding: 0 0 16px;
+        }
+    }
+
+    &__left {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        padding: 5px 0 0 33px;
+
+        @include mq(1199) {
+            padding: 5px 0 0 57px;
+        }
+
+        @include mq(749) {
+            width: 100%;
+            padding: 6px 0 0;
+        }
+    }
+
+    &__item {
+        padding: 5px 0 10px;
+
+        &:first-child {
+            .contacts__item-image img {
+                width: 40%;
+                margin: 5px 0 0;
+            }
+        }
+
+        @include mq(1199) {
+            padding: 5px 0 15px;
+            &:first-child {
+                .contacts__item-image {
+                    padding: 0 0 20px;
+
+                    img {
+                        width: auto;
+                    }
+                }
+                
+            }
+        }
+
+        @include mq(749) {
+            padding: 5px 0 9px;
+        }
+    }
+
+    &__item-image {
+        float: left;
+        width: 60px;
+        height: 100%;
+        text-align: center;
+
+        img {
+            width: 50%;
+        }
+
+        @include mq(1199) {
+            margin: 0 -6px 0 0;
+            img {
+                width: auto;
+            }
+        }
+
+        @include mq(749) {
+            margin: 0 -9px 0 0;
+        }
+    }
+
+    &__item-text,
+    &__item-text a {
+        font-family: "RoadRadio-Bold";
+        font-size: 22px;
+        color: #000;
+        text-decoration: none;
+
+        @include mq(1199) {
+            font-size: 18px;
+        }
+
+        @include mq(749) {
+            font-size: 16px;
+        }
+    }
+
+    &__minimap {
+        padding: 15px 0 15px 11px;
+
+        @include mq(1199) {
+            display: none;
+        }
+    }
+
+    &__right {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        padding: 9px 0 0 66px;
+
+        p {
+            font-family: "RoadRadio";
+            font-size: 22px;
+            color: #000;
+            margin: 0 0 11px;
+        }
+
+        @include mq(1199) {
+            padding: 9px 0 0 16px;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        @include mq(749) {
+            width: 100%;
+            padding: 4px 0 0 38px;
+
+            p {
+                font-size: 16px;
+                margin: 0 0 14px;
+            }
+        }
+    }
+
+    &__map {
+        height: 500px;
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include mq(1199) {
+            height: 380px;
+        }
+
+        @include mq(749) {
+            height: 300px;
+        }
+    }
+}

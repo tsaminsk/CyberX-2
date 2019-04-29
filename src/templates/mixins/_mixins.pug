@@ -1,0 +1,30 @@
+mixin headerBlock(nav, current, headerClass)
+    header.header(class=headerClass)
+        .header__inner
+            .header__mobile
+                a(href="#")
+                    img(src="assets/images/icons/menu.png", alt="")
+            .header__logo
+                a(href="/")
+                    img(src="assets/images/logo.png" alt="")
+            ul.header__nuv
+                each item in nav
+                    if item.url === current
+                        li.is-active
+                            a(href=item.url)= item.name
+                    else
+                        li
+                            a(href=item.url)= item.name
+            .header__phone
+                a.phone(href="#")
+                    img(src="assets/images/icons/phone-icon.png" title="Заказать звонок" alt="")
+                a(href="tel:+74992882735")
+                    |8 499 288 27 35
+        .header__decor
+
+
+mixin breadCrumbs(navs, className)
+    ul.bread-crumbs(class=className)
+        each item in navs
+            li.bread-crumbs__item
+                a(href=item.link)= item.name

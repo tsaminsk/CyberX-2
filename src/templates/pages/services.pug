@@ -1,0 +1,11 @@
+extends ../_template
+
+block variables
+	- var title = "Услуги"
+	//- - var scriptLink = "https://api-maps.yandex.ru/2.1/?load=package.standard&lang=ru-RU"
+
+	append sharedVars
+		- var pageUrl = '/services.html'
+	
+block content
+	include ./../modules/_services

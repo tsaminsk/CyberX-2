@@ -1,0 +1,221 @@
+.slider {
+    position: relative;
+    padding: 105px 0 0;
+    height: 806px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) top center no-repeat;
+    background-size: 100% 15%;
+    overflow: hidden;
+
+    @include mq(1199) {
+        height: 400px;
+        padding: 82px 0 0;
+        background-size: 100% 10%;
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 400%;
+        height: 100%;
+        font-size: 0;
+        transform: translate3d(0, 0, 0);
+    }
+    
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        height: 100%;
+        padding: 257px 0 0 16.6vw;
+        background: center center no-repeat;
+        background-size: cover;
+
+        @include mq(1199) {
+            padding: 183px 0 0 calc(50vw - 345px);
+        }
+
+        @include mq(749) {
+            padding: 178px 0 0 15px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__item-title {
+        font-family: "RoadRadio";
+        font-size: 50px;
+        color: #fff;
+
+        span {
+            font-size: 45px;
+        }
+
+        @include mq(1199) {
+            font-size: 31px;
+            line-height: 35px;
+
+            span {
+                font-size: 28px;
+            }
+        }
+
+        @include mq(749) {
+            width: 90%;
+            max-width: 370px;
+            font-size: 28px;
+            line-height: 30px;
+
+            span {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__pagination {
+        position: absolute;
+        z-index: 2;
+        bottom: 171px;
+        left: 0;
+        width: calc(50% - 535px);
+        height: 40px;
+        text-align: right;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 0;
+            display: block;
+            width: calc(100% - 230px);
+            height: 1px;
+            background: #3e3b39;
+        }
+
+        @include mq(1640) {
+            width: 280px;
+
+            &:before {
+                width: 50px;
+            }
+        }
+
+        @include mq(1199) {
+            width: 234px;
+            bottom: 30px;
+            left: calc(50% - 375px);
+            height: 30px;
+
+            &:before {
+                width: 15px;
+            }
+        }
+
+        @include mq(749) {
+            left: 0;
+            width: 235px;
+        }
+    }
+
+    &__arrow-left,
+    &__arrow-right {
+        position: absolute;
+        z-index: 2;
+        top: 47.2%;
+        display: inline-block;
+        vertical-align: top;
+
+        @include mq(1199) {
+            top: 123px;
+            width: 35px;
+            overflow: hidden;
+
+            img {
+                width: 45px;
+            }
+        }
+    }
+
+    &__arrow-left {
+        left: 0;
+
+        @include mq(1199) {
+            left: calc(50% - 375px);
+
+            img {
+                margin: 0 0 0 -10px;
+            }
+        }
+
+        @include mq(749) {
+            left: 0;
+        }
+    }
+
+    &__arrow-right {
+        right: 0;
+
+        @include mq(1199) {
+            right: calc(50% - 375px);
+
+            img {
+                margin: 0 -10px 0 0;
+            }
+        }
+
+        @include mq(749) {
+            right: 0;
+        }
+    }
+}
+
+.pagination {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 230px;
+    height: 100%;
+    padding: 18px 24px 18px 4px;
+    font-size: 0;
+    border-radius: 3px;
+    border: 1px solid #3e3b39;
+
+    &::after {
+        position: absolute;
+        z-index: 20;
+        content:'';
+        top: 0;left: 0;
+        width: 10px;
+        height: 10px;
+        background: #000;
+    }
+
+    &-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 30px;
+        height: 4px;
+        background: #b0b0b0;
+        margin: 0 0 0 20px;
+
+        &.is-active {
+            background-color: #fff;
+            pointer-events: none;
+        }
+    }
+
+    @include mq(1199) {
+        width: 220px;
+        padding: 14px 20px 14px 2px;
+
+        &-item {
+            height: 2px;
+            margin: 0 0 0 19px;
+        }
+    }
+}
+

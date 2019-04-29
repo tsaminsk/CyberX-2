@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Клубы CyberX</title>
+    <meta content="Matvey Phoenix" name="author">
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <script src="https://api-maps.yandex.ru/2.1/?load=package.standard&amp;lang=ru-RU"></script>
+    <link type="image/x-icon" rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/styles/main.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__mobile"><a href="#"><img src="assets/images/icons/menu.png" alt=""></a></div>
+            <div class="header__logo"><a href="/"><img src="assets/images/logo.png" alt=""></a></div>
+            <ul class="header__nuv">
+                <li><a href="/">CyberX</a></li>
+                <li class="is-active"><a href="/clubs.html">Клубы</a></li>
+                <li><a href="/services.html">Услуги</a></li>
+                <li><a href="/news.html">Новости</a></li>
+                <li><a href="/contacts.html">Контакты</a></li>
+                <li><a href="https://www.cyberx-franchise.ru/">Франшиза</a></li>
+            </ul>
+            <div class="header__phone"><a class="phone" href="#"><img src="assets/images/icons/phone-icon.png" title="Заказать звонок" alt=""></a><a href="tel:+74992882735">8 499 288 27 35</a></div>
+        </div>
+        <div class="header__decor"></div>
+    </header>
+    <section class="clubs">
+        <div class="clubs__crumbs">
+            <ul class="bread-crumbs">
+                <li class="bread-crumbs__item"><a href="/">CyberX</a></li>
+                <li class="bread-crumbs__item"><a href="/clubs.html">Клубы</a></li>
+            </ul>
+        </div>
+        <div class="clubs__title">
+            <h1>Клубы</h1>
+        </div>
+        <div class="clubs__content">
+            <div class="clubs__data">
+                <div class="clubs__data-head">
+                    <div class="clubs__data-title">7 клубов <span>CyberX</span></div>
+                    <div class="clubs__data-select"><select value="Москва">
+                            <options>Москва</options>
+                            <options>С-Петербург</options>
+                            <options>Иркутск</options>
+                        </select></div>
+                </div>
+                <div class="clubs__items">
+                    <div class="clubs__item is-day">
+                        <div class="clubs__item-img" style="background-image: url(assets/images/clubs-item-1.png);" alt=""></div>
+                        <div class="clubs__item-title">CyberX corner</div>
+                        <div class="clubs__item-name">ЦДМ на Лубянке, Москва</div>
+                        <div class="clubs__item-atr">
+                            <div class="clubs__item-pc"> <span>115 игровых <br>компьютеров</span></div>
+                            <div class="clubs__item-vip"><span>3 VIP <br>комнаты</span></div>
+                            <div class="clubs__item-time"><span>круглосуточно</span></div>
+                        </div>
+                    </div>
+                    <div class="clubs__item is-day">
+                        <div class="clubs__item-img" style="background-image: url(assets/images/clubs-item-1.png);" alt=""></div>
+                        <div class="clubs__item-title">CyberX corner</div>
+                        <div class="clubs__item-name">ЦДМ на Лубянке, Москва</div>
+                        <div class="clubs__item-atr">
+                            <div class="clubs__item-pc"> <span>115 игровых <br>компьютеров</span></div>
+                            <div class="clubs__item-vip"><span>3 VIP <br>комнаты</span></div>
+                            <div class="clubs__item-time"><span>круглосуточно</span></div>
+                        </div>
+                    </div>
+                    <div class="clubs__item">
+                        <div class="clubs__item-img" style="background-image: url(assets/images/clubs-item-1.png);" alt=""></div>
+                        <div class="clubs__item-title">CyberX corner</div>
+                        <div class="clubs__item-name">ЦДМ на Лубянке, Москва</div>
+                        <div class="clubs__item-atr">
+                            <div class="clubs__item-pc"> <span>115 игровых <br>компьютеров</span></div>
+                            <div class="clubs__item-vip"><span>3 VIP <br>комнаты</span></div>
+                            <div class="clubs__item-time"><span>10:00 - 24:00</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clubs__map">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container"><a href="#">Реквизиты</a></div>
+        </div>
+        <div class="footer__content">
+            <div class="footer__main">
+                <div class="container">
+                    <div class="footer__contacts">
+                        <h4>Контакты</h4>
+                        <div class="footer__contacts-item">
+                            <div class="footer__contacts-item--image"><img src="assets/images/icons/point.png" alt=""></div>
+                            <div class="footer__contacts-item--text">Москва, <br> улица Архитектора Власова, 55</div>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <div class="footer__contacts-item--image"><img src="assets/images/icons/phone-red.png" alt=""></div>
+                                <div class="footer__contacts-item--text"><a href="tel:8-499-288-27-35">8-499-288-27-35</a></div>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <div class="footer__contacts-item--image"><img src="assets/images/icons/mail.png" alt=""></div>
+                                <div class="footer__contacts-item--text"><a href="mailto:info@cyberx-franchise.ru">info@cyberx-franchise.ru</a></div>
+                            </div>
+                            <div class="footer__contacts-soc"><a href="#"> <img src="assets/images/icons/soc.png" alt=""></a></div>
+                        </div>
+                        <div class="footer__feedback">
+                            <h4>Обратная связь</h4>
+                            <form class="footer__form ajax_form" action="#" method="post">
+                                <div class="form-inputs-col"><input type="text" id="form-name" name="name" placeholder="ФИО" value=""><input class="is-error" type="email" id="form-email" name="email" placeholder="EMAIL" value=""></div>
+                                <div class="form-inputs-col"><input class="phone_mask" type="tel" id="form-phone" name="phone" placeholder="Номер вашего телефона" value=""><textarea type="text" id="fort-text" name="text" placeholder="ТЕКСТ СООБЩЕНИЯ"> </textarea></div>
+                                <div class="form-submit"><button class="is-disabled" type="submit">Отправить</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="container">
+                        <div class="footer__copy">© 2016–2019 ООО "РИКИС". Все права защищены</div>
+                        <div class="footer__desiner"><a href="#">Автор дизайна</a></div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <script src="./assets/scripts/libs.min.js"></script>
+    <script src="./assets/scripts/script.min.js"></script>
+</body>
+
+</html>

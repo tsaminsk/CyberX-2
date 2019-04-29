@@ -1,0 +1,259 @@
+.services {
+    background-color: #f2f2f2;
+    padding: 0 0 40px;
+
+    @include mq(1199) {
+        padding: 0 0 1px;
+    }
+
+    @include mq(749) {
+        padding: 2px 0 6px;
+    }
+
+    &__title {
+        padding: 43px 0 0;
+
+        h1 {
+            font-family: "9928";
+            font-size: 35px;
+            color: #000;
+            text-align: center;
+        }
+
+        @include mq(1199) {
+            padding: 4px 0 19px;
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        @include mq(749) {
+            padding: 17px 0 13px;
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding: 34px 0 20px;
+        
+        @include mq(1199) {
+            width: 750px;
+            padding: 26px 15px;
+            margin: 0 auto;
+        }
+        
+        @include mq(749) {
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+    
+    &__content-wrapp {
+        font-size: 0;
+        
+        @include mq(749) {
+            width: 600vw;
+            // transform: translate3d(-83.33%, 0, 0);
+        }
+    }
+
+    &__items-left,
+    &__items-right {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+    }
+    
+    &__items-left {
+        text-align: right;
+        
+        .services__item-inner {
+            float: right;
+            margin: 18px 11px 12px auto;
+        }
+
+        .services__item-num {
+            float: right;
+            text-align: center;
+            margin: 8px 31px 0 0;
+
+            &:after {
+                right: -55px;
+            }
+        }
+
+        @include mq(1559) {
+
+            .services__item-num {
+                &:after {
+                    right: -65px;
+                }
+            }
+        }
+
+        @include mq(1199) {
+            padding: 0 7px 0 0;
+
+            .services__item-inner {
+                float: none;
+                padding: 0;
+                margin: 0 0 15px;
+            }
+        }
+    }
+    
+    &__items-right {
+        text-align: left;
+        
+        .services__item-inner {
+            float: left;
+            text-align: center;
+            margin: 18px auto 12px 18px;
+        }
+
+        .services__item-num {
+            float: left;
+            text-align: center;
+            margin: 8px 0 0 30px;
+
+            &:after {
+                left: -70px;
+            }
+        }
+
+        @include mq(1559) {
+            .services__item-num {
+                &:after {
+                    left: -70px;
+                }
+            }
+        }
+
+        @include mq(1199) {
+            padding: 0;
+
+            .services__item-inner {
+                float: none;
+                padding: 0;
+                margin: 0 0 15px 7px;
+            }
+        }
+    }
+
+    &__item {
+        height: 380px;
+        background-image: linear-gradient(to bottom, rgba(#ca8a91, 0) 193px, rgba(#ca8a91, 0.65) 193px, rgba(#ca8a91, 0.65) 194px, rgba(#ca8a91, 0) 194px);
+        
+        @include mq(1199) {
+            height: auto;
+            background-image: none;
+        }
+
+        @include mq(749) {
+            display: inline-block;
+            vertical-align: top;
+            width: 33.33%;
+            padding: 15px;
+        }
+    }
+
+    &__item-inner {
+        position: relative;
+        z-index: 1;
+        width: 620px;
+        height: 350px;
+        border-radius: 5px;
+        border: 1px solid #bf1e2e;
+        background: center center no-repeat;
+        background-size: cover;
+        box-shadow: 0px 0px 13px 3px rgba(#851622, 0.5);
+        
+        @include mq(1559) {
+            width: 39.75vw;
+        }
+
+        @include mq(1199) {
+            width: auto;
+            height: 279px;
+            background-image: none;
+        }
+
+        @include mq(749) {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__item-num {
+        position: relative;
+        width: 100px;
+        height: 150px;
+        font-family: "9928";
+        font-size: 120px;
+        text-align: right;
+        color: #bf1e2e;
+        opacity: 0.6;
+
+        &:after {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            top: 66px;
+            width: 100px;
+            height: 1px;
+            background-color: rgba(#bf1e2e, 0.6);
+        }
+
+        @include mq(1559) {
+            width: 70px;
+        }
+
+        @include mq(1199) {
+            display: none;
+        }
+    }
+
+    &__item-title {
+        height: 80px;
+        font-family: "RoadRadio";
+        font-size: 23px;
+        line-height: 80px;
+        color: #fff;
+        text-align: center;
+        background: rgba(#bf1e2e, 0.6);
+
+        @include mq(1199) {
+            height: 50px;
+            font-size: 18px;
+            line-height: 50px;
+        }
+    }
+    
+    &__arrow-left,
+    &__arrow-right {
+        display: none;
+
+        @include mq(749) {
+            position: absolute;
+            z-index: 2;
+            top: 231px;
+            display: inline-block;
+            vertical-align: top;
+            width: 45px;
+        }
+    }
+
+    &__arrow-left {
+        left: -8px;
+    }
+
+    &__arrow-right {
+        right: -6px;
+    }
+}
