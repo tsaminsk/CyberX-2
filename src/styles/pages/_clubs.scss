@@ -103,7 +103,7 @@
         &.is-open {
 
             &:after {
-                transform: rotate(180deg);
+                transform: scale(1, -1);
             }
         }
     }
@@ -149,6 +149,7 @@
         img {
             display: inline-block;
             vertical-align: top;
+            transition: transform 0.25s;
             cursor: pointer;
         }
     }

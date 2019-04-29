@@ -12,13 +12,13 @@ window.onload = function () {
 
     if (items > 3) {
         $('.js-clubs-items-arrow').on('click', function () {
-            if (!$(this).hasClass('rotate180')) {
+            if (!$(this).hasClass('mirror-h')) {
                 if (items - currentItem > 6) {
                     currentItem += 3;
                 }
                 else if (items - currentItem > 3 && items - currentItem <= 5 || items - currentItem < 3) {
                     currentItem += items % 3;
-                    currentItem >= items - 3 ? $(this).addClass('rotate180') : null;
+                    currentItem >= items - 3 ? $(this).addClass('mirror-h') : null;
                 }
 
             }
@@ -31,11 +31,14 @@ window.onload = function () {
                 }
                 else {
                     currentItem = 0;
-                    $(this).removeClass('rotate180');
+                    $(this).removeClass('mirror-h');
                 }
             }
             $('.clubs__items-wrapp').css('transform', 'translate3d(0, -' + (297 * currentItem) + 'px, 0)');
         });
+    }
+    else {
+        $('.js-clubs-items-arrow').css('display', 'none');
     }
 
     

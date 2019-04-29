@@ -83,6 +83,10 @@ div {
     transform: rotate(180deg);
 }
 
+.mirror-h {
+    transform: scale(1, -1);
+}
+
 .ymaps-layers-pane {
     filter: brightness(50%);
 }
