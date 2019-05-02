@@ -1,0 +1,254 @@
+.club {
+    position: relative;
+
+    .about__title {
+        padding: 40px 0 24px 11px;
+
+        h2 {
+            font-size: 35px;
+        }
+    }
+    
+    &__crumbs {
+        position: absolute;
+        z-index: 3;
+        top: -701px;
+        left: 0;
+        width: 100%;
+        height: 66px;
+        background-color: rgba(0,0,0, 0.5);
+        border-top: 1px solid #bf1e2e;
+    }
+
+    &__gallery {
+        position: relative;
+        height: 926px;
+        background: url(./../images/club-gallery-bg.png) center center no-repeat;
+        background-size: cover;
+    }
+
+    &__gallery-content {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 87px calc(50% - 650px) 75px;
+        font-size: 0;
+        background-image: linear-gradient(to bottom, 
+            rgba(#bf1e2e, 0) 0, 
+            rgba(#bf1e2e, 0) 270px,
+            rgba(#bf1e2e, 0.5) 270px,
+            rgba(#bf1e2e, 0.5) 271px,
+            rgba(#bf1e2e, 0) 271px,
+            rgba(#bf1e2e, 0) 660px,
+            rgba(#bf1e2e, 0.5) 660px,
+            rgba(#bf1e2e, 0.5) 661px,
+            rgba(#bf1e2e, 0) 661px,
+            rgba(#bf1e2e, 0) 100%,
+        );
+    }
+
+    &__gallery-item {
+        width: calc(33.33% - 40px);
+        height: 370px;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 3px;
+        border: 1px solid #bf1e2e;
+        box-shadow: 0px 0px 13px 3px rgba(133, 22, 34, 0.85);
+        margin: 0 20px;
+        overflow: hidden;
+
+        img {
+            min-width: 100%;
+            min-height: 100%
+        }
+    }
+    
+    &__gallery-item--wide  {
+        width: 1260px;
+        margin: 0 20px 20px;
+    }
+
+    &__gadgets {
+        height: 397px;
+        color: #fff;
+        background-color: #851622;
+    }
+
+    &__gadgets-title {
+        padding: 74px 0 45px 0;
+
+        h2 {
+            font-family: "9928";
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+
+    &__gadgets-items {
+        font-size: 0;
+        text-align: center;
+    }
+
+    &__gadgets-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 280px;
+
+        img {
+            margin: 7px 0 24px;
+        }
+
+        h3 {
+            font-family: "Navigo Medium";
+            font-size: 30px;
+            text-align: center;
+            margin: 0 0 -2px;
+        }
+
+        p {
+            font-family: "Navigo Light";
+            font-size: 20px;
+            text-align: center;
+            margin: 0 0 -6px;
+        }
+
+        &:nth-child(2) {
+            width: 292px;
+            border-right: 1px solid #9d454e;
+            border-left: 1px solid #9d454e;
+            margin: 0 38px;
+        }
+    }
+
+    &__price {
+        height: 580px;
+        background: url(./../images/club-price-bg.png) center center no-repeat;
+        background-size: cover;
+        color: #fff;
+    }
+
+    &__price-title {
+        padding: 74px 0 20px;
+        font-family: "9928";
+        text-align: center;
+
+        h2 {
+            font-size: 35px;
+            margin: 0 0 8px;
+        }
+
+        p {
+            font-size: 23px;
+        }
+    }
+
+    &__price-content {
+        width: 1300px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    &__price-item {
+        padding: 1px;
+        border-radius: 3px;
+        background-image: linear-gradient(to bottom, #bf1f2f, #fff);
+        overflow: hidden;
+        margin: 0 0 32px;
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-radius: 3px;
+            background-color: #851622;
+        }
+
+        th {
+            height: 49px;
+            font-family: "Navigo Regular";
+            font-size: 16px;
+            background-color: #232323;
+        }
+
+        td {
+            height: 34px;
+            font-family: "Navigo Medium";
+            font-size: 16px;
+            border-left: 1px solid #9d454e;
+
+            &:first-child {
+                font-family: "Navigo Bold";
+                font-size: 18px;
+                border-left: none;
+            }
+        }
+
+        th, 
+        td {
+
+            &:first-child {
+                width: 29.6%;
+            }
+        }
+
+        tr.to-bottom td {
+            vertical-align: bottom;
+        }
+
+        tr.to-top td {
+            vertical-align: top;
+        }
+
+        td.is-big {
+            height: 46px;
+            font-family: "9928";
+            font-size: 23px;
+        }
+    }
+
+    &__soc {
+
+    }
+
+    &__soc-title {
+        padding: 39px 0;
+        font-family: "9928";
+        font-size: 35px;
+        color: #000;
+        text-align: center;
+
+        img {
+            width: 250px;
+            transform: translate3d(12px, 26px, 0);
+            margin: 0 22px 0 0;
+        }
+
+        @include mq(1199) {
+            padding: 22px 0 28px;
+            font-size: 28px;
+
+            img {
+                width: 200px;
+                transform: translate3d(6px, 7px, 0);
+                margin: 0 21px 0 0;
+            }
+        }
+
+        @include mq(749) {
+            padding: 22px 0 35px;
+
+            img {
+                margin: 0;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+

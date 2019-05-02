@@ -12,6 +12,19 @@
         background-size: 100% 10%;
     }
 
+    &.is-litle {
+        height: 701px;
+
+        .slider__item {
+            padding: 153px 0 0 16.6vw;
+        }
+
+        .slider__arrow-left,
+        .slider__arrow-right {
+            top: 39.2%;
+        }
+    }
+
     &__img {
         position: absolute;
         z-index: 2;
@@ -49,6 +62,10 @@
         font-family: "RoadRadio";
         font-size: 50px;
         color: #fff;
+
+        strong {
+            font-family: "RoadRadio-Black";
+        }
 
         span {
             font-size: 45px;

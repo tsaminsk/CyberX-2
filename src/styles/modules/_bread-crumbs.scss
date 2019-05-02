@@ -57,7 +57,7 @@
         }
     }
 
-    .bread-crumbs__item:first-child {
+    .bread-crumbs__item:not(:last-child) {
         a {
             color: #bf1e2e;
         }

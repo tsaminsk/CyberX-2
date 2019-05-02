@@ -63,7 +63,7 @@
 
         &.is-open {
             .news__item-text {
-                height: auto;
+                max-height: 3000px;
             }
         }
         
@@ -199,12 +199,14 @@
     }
 
     &__item-text {
-        height: 140px;
+        height: auto;
+        max-height: 140px;
         padding: 0 15px 0 0;
         font-family: "Navigo Regular";
         font-size: 16px;
         line-height: 19px;
         color: #000;
+        transition: max-height 1.5s;
         overflow: hidden;
 
         p {

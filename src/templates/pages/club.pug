@@ -1,0 +1,14 @@
+extends ../_template
+
+block variables
+	- var title = "Клуб CyberX"
+	- var scriptLink = "https://api-maps.yandex.ru/2.1/?load=package.standard&lang=ru-RU"
+	append sharedVars
+		- var pageUrl = '/club.html'
+		- var headerClass = ''
+	
+
+block content
+	+slider("assets/images/club-slider.png", "club", "is-litle")
+	//- +ciberCommunity("встречайте первый кибер клуб в г. иркутске")
+	include ./../modules/_club

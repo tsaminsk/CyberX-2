@@ -1,0 +1,82 @@
+section.club
+    .club__about
+        +ciberCommunity("встречайте первый кибер клуб в г. иркутске")
+    .club__crumbs
+        +breadCrumbs(crumbsClub, crumbsClubClassName)
+    .club__gallery
+        .club__gallery-content
+            .club__gallery-item.club__gallery-item--wide
+                img(src="assets/images/club-gallery-1.png" alt="")
+            .club__gallery-item
+                img(src="assets/images/club-gallery-2.png" alt="")
+            .club__gallery-item
+                img(src="assets/images/club-gallery-3.png" alt="")
+            .club__gallery-item
+                img(src="assets/images/club-gallery-4.png" alt="")
+    .club__gadgets
+        .club__gadgets-title
+            h2 Игровые устройства
+        .club__gadgets-items
+            .club__gadgets-item
+                img(src="assets/images/icons/club-gadget-1.png" alt="")
+                h3 15
+                p игровых машин
+            .club__gadgets-item
+                img(src="assets/images/icons/club-gadget-2.png" alt="")
+                h3 134
+                p кв. метра
+            .club__gadgets-item
+                img(src="assets/images/icons/club-gadget-3.png" alt="")
+                h3 2
+                p SonyPS4
+    .club__price
+        .club__price-title
+            h2 Игровое время
+            p Стоимость одного игрового часа
+        .club__price-content
+            .club__price-item
+                table
+                    tbody
+                        tr
+                            th Дни недели
+                            th 08:00 - 13:00
+                            th 13:00 - 18:00
+                            th 18:00 - 00:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 50 руб/час
+                            td 70 руб/час
+                            td 100 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 70 руб/час
+                            td 100 руб/час
+                            td 120 руб/час
+            .club__price-item
+                table
+                    tbody
+                        tr
+                            td(colspan="5").is-big Пакеты
+                        tr
+                            th Дни недели
+                            th Пакет «День»<br>13:00 - 18:00
+                            th Пакет «Вечер»<br>18:00 - 00:00
+                            th Пакет «1/2 ночь»<br>00:00 - 04:00
+                            th Пакет «Ночь»<br>00:00 - 08:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 280 руб/час
+                            td 500 руб/час
+                            td 250 руб/час
+                            td 400 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 400 руб/час
+                            td 600 руб/час
+                            td 300 руб/час
+                            td 500 руб/час
+    .club__soc
+        .club__soc-title
+            img(src="assets/images/about-logo.png" alt="")
+            span в сетях
+        
