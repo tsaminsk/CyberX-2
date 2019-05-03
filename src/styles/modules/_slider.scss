@@ -23,6 +23,21 @@
         .slider__arrow-right {
             top: 39.2%;
         }
+
+        @include mq(1199) {
+            height: 318px;
+
+            .slider__item {
+                padding: 101px 0 0 15.6vw;
+            }
+
+            .slider__arrow-left,
+            .slider__arrow-right {
+                top: 13.2%;
+            }
+
+        }
+
     }
 
     &__img {

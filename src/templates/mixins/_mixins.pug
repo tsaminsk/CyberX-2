@@ -38,7 +38,7 @@ mixin slider(image, type, className)
                         .slider__item-title
                             | <strong>кибер клуб</strong> CyberX<br>
                             | «gaming club»<br>
-                            | в иркутске
+                            span в иркутске
                     if (type == "index")
                         .slider__item-title
                             | сеть кибер клубов <br>
@@ -67,4 +67,8 @@ mixin ciberCommunity(text, text2, text3)
             h2 #{text}
         if (text3)
             p #{text3}
+
+mixin socItem(name)
+    a(href="#").club__soc-item
+        img(src=`assets/images/icons/soc-${name}.png` alt="")
         

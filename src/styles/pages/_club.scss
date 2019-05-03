@@ -8,6 +8,24 @@
             font-size: 35px;
         }
     }
+
+    @include mq(1199) {
+        .about__logo {
+            padding: 27px 0 25px 0px;
+
+            img {
+                width: 281px;
+            }
+        }
+
+        .about__title {
+            padding: 23px 0 14px 0;
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+    }
     
     &__crumbs {
         position: absolute;
@@ -18,6 +36,11 @@
         height: 66px;
         background-color: rgba(0,0,0, 0.5);
         border-top: 1px solid #bf1e2e;
+
+        @include mq(1199) {
+            top: -319px;
+            background: none;
+        }
     }
 
     &__gallery {
@@ -25,14 +48,13 @@
         height: 926px;
         background: url(./../images/club-gallery-bg.png) center center no-repeat;
         background-size: cover;
+
+        @include mq(1199) {
+            height: auto;
+        }
     }
 
     &__gallery-content {
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100%;
         height: 100%;
         padding: 87px calc(50% - 650px) 75px;
         font-size: 0;
@@ -48,6 +70,14 @@
             rgba(#bf1e2e, 0) 661px,
             rgba(#bf1e2e, 0) 100%,
         );
+
+        @include mq(1199) {
+            width: 750px;
+            padding: 21px 0 40px;
+            background: none;
+            margin: 0 auto;
+            overflow: hidden;
+        }
     }
 
     &__gallery-item {
@@ -68,23 +98,70 @@
     }
     
     &__gallery-item--wide  {
-        width: 1260px;
+        width: calc(100% - 40px);
+        max-width: 1260px;
         margin: 0 20px 20px;
+    }
+
+    @include mq(1199) {
+        &__gallery-content--wrapp {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 3000px;
+        }
+
+        &__gallery-item,
+        &__gallery-item--wide {
+            width: 720px;
+            height: 260px;
+            margin: 0 15px;
+        } 
+    }
+
+    &__gallery-arrow-left,
+    &__gallery-arrow-right {
+        display: none;
+
+        @include mq(1199) {
+            display: block;
+            position: absolute;
+            top: 45%;
+        }
+    }
+
+    &__gallery-arrow-left {
+        left: calc(50% - 375px);
+    }
+    &__gallery-arrow-right {
+        right: calc(50% - 375px);
     }
 
     &__gadgets {
         height: 397px;
         color: #fff;
         background-color: #851622;
+
+        @include mq(1199) {
+            height: 284px;
+        }
     }
 
     &__gadgets-title {
-        padding: 74px 0 45px 0;
+        padding: 74px 0 45px;
 
         h2 {
             font-family: "9928";
             font-size: 35px;
             text-align: center;
+        }
+
+        @include mq(1199) {
+            padding: 30px 0 26px;
+            
+            h2 {
+                font-size: 28px;
+            }
         }
     }
 
@@ -122,6 +199,25 @@
             border-left: 1px solid #9d454e;
             margin: 0 38px;
         }
+
+        @include mq(1199) {
+            width: 250px;
+
+            h3 {
+                font-size: 23px;
+            }
+
+            p {
+                font-size: 18px;
+                margin: 0 0 5px;
+            }
+
+            &:nth-child(2) {
+                width: 250px;
+                margin: 0;
+            }
+        }
+
     }
 
     &__price {
@@ -144,10 +240,23 @@
         p {
             font-size: 23px;
         }
+
+        @include mq(1199) {
+            padding: 34px 0 11px;
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
     }
 
     &__price-content {
-        width: 1300px;
+        width: calc(100% - 30px);
+        max-width: 1300px;
         padding: 15px;
         margin: 0 auto;
     }
@@ -209,12 +318,12 @@
         }
     }
 
-    &__soc {
+    &__contacts {
 
     }
 
-    &__soc-title {
-        padding: 39px 0;
+    &__contacts-title {
+        padding: 39px 0 32px;
         font-family: "9928";
         font-size: 35px;
         color: #000;
@@ -248,6 +357,43 @@
                 display: block;
             }
         }
+    }
+
+    &__contacts-soc {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 40px;
+    }
+
+    &__soc-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #bf1e2e;
+        margin: 0 5px;
+    }
+
+    &__contacts-map {
+        position: relative;
+        height: 380px;
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__contacts-address {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        padding: 112px 0 0 calc(50% - 650px);
+        background-color: rgba(#fff, 0.8);
     }
 }
 
