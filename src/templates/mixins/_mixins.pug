@@ -30,30 +30,30 @@ mixin breadCrumbs(navs, className)
                 a(href=item.link)= item.name
 
 mixin slider(image, type, className)
-    .slider(class=className)
+    .slider.js-slider(class=className)
         .slider__img
             each i in [0,1,2,3]
                 .slider__item(style="background-image: url(" + image + ")")
                     if (type == "club")
                         .slider__item-title
-                            | <strong>кибер клуб</strong> CyberX<br>
+                            | <strong>кибер клуб</strong> CyberX #{i + 1}<br>
                             | «gaming club» <br>
                             span в&nbsp;иркутске
                     if (type == "index")
                         .slider__item-title
-                            | сеть кибер клубов <br>
+                            | сеть кибер клубов #{i + 1}<br>
                             | CyberX - <span>пример <br>
                             | заголовка на&nbsp;баннере</span>
         .slider__pagination
-            .pagination
+            .pagination.js-slider-pagination
                 a(href="").pagination-item.is-active
                 a(href="").pagination-item
                 a(href="").pagination-item
                 a(href="").pagination-item
-        .slider__arrow-left
+        .slider__arrow-left.js-slider-left
             a(href="#")
                 img(src="assets/images/icons/slider-arrow.png" alt="")
-        .slider__arrow-right
+        .slider__arrow-right.js-slider-right
             a(href="#")
                 img(src="assets/images/icons/slider-arrow.png" alt="").rotate180
 

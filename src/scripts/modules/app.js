@@ -4,7 +4,6 @@ var currentClubsItem;
 var clubsItems;
 
 window.onload = function () {
-
     if (document.querySelector('#map') != null) {
         ymaps.ready(init(coords));
     }
@@ -17,6 +16,44 @@ window.onload = function () {
         });
         setClubsSelect();
         setClubsItems();
+    }
+
+    // слайдер главной страницы и страницы клуба
+    if ($(document).find('.js-slider')) {
+        const sliderImg = $('.js-slider').find('.slider__img');
+        const arrPagination = $('.js-slider-pagination').find('.pagination-item');
+        let n = 0;
+
+        $('.js-slider-left').on('click', function (event) {
+            event.preventDefault();
+            n < 3 ? n++ : n = 0;
+            sliderImg.css('transform', `translate3d(-${n * 25}%, 0, 0)`);
+            changePagination(n);
+        });
+
+        $('.js-slider-right').on('click', function (event) {
+            event.preventDefault();
+            n > 0 ? n-- : n = 3;
+            sliderImg.css('transform', `translate3d(-${n * 25}%, 0, 0)`);
+            changePagination(n);
+        });
+
+        for (let i = 0; i < arrPagination.length; i++) {
+            $(arrPagination[i]).on('click', function (event) {
+                event.preventDefault();
+                sliderImg.css('transform', `translate3d(-${i * 25}%, 0, 0)`);
+                changePagination(i);
+            });
+        }
+
+        function changePagination(n) {
+            for (let i = 0; i < arrPagination.length; i++) {
+                if ($(arrPagination[i]).hasClass('is-active')) {
+                    $(arrPagination[i]).removeClass('is-active');
+                }
+            }
+            $(arrPagination[n]).addClass('is-active');
+        }
     }
 
     // блок новости 
@@ -68,7 +105,5 @@ window.onload = function () {
         }
         $(this).parents('.news__item').toggleClass('is-open');
         
-    });   
-
-      
+    });
 };
