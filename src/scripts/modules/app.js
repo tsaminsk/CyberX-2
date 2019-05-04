@@ -24,6 +24,12 @@ window.onload = function () {
         const arrPagination = $('.js-slider-pagination').find('.pagination-item');
         let n = 0;
 
+        setInterval(() => {
+            n < 3 ? n++ : n = 0;
+            sliderImg.css('transform', `translate3d(-${n * 25}%, 0, 0)`);
+            changePagination(n);
+        }, 7000);
+
         $('.js-slider-left').on('click', function (event) {
             event.preventDefault();
             n < 3 ? n++ : n = 0;
