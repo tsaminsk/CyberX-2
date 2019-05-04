@@ -1,6 +1,6 @@
 section.club
     .club__about
-        +ciberCommunity("встречайте первый кибер клуб в г. иркутске")
+        +ciberCommunity("встречайте первый кибер клуб в г.иркутске")
     .club__crumbs
         +breadCrumbs(crumbsClub, crumbsClubClassName)
     .club__gallery
@@ -41,7 +41,7 @@ section.club
             h2 Игровое время
             p Стоимость одного игрового часа
         .club__price-content
-            .club__price-item
+            .club__price-item.is-desctop
                 table
                     tbody
                         tr
@@ -59,7 +59,43 @@ section.club
                             td 70 руб/час
                             td 100 руб/час
                             td 120 руб/час
-            .club__price-item
+            .club__price-item.is-mobile
+                table
+                    tbody
+                        tr
+                            th Дни недели
+                            th 08:00 - 13:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 50 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 70 руб/час
+            .club__price-item.is-mobile
+                table
+                    tbody
+                        tr
+                            th Дни недели
+                            th 13:00 - 18:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 70 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 100 руб/час
+            .club__price-item.is-mobile
+                table
+                    tbody
+                        tr
+                            th Дни недели
+                            th 18:00 - 00:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 100 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 120 руб/час
+            .club__price-item.is-desctop
                 table
                     tbody
                         tr
@@ -82,6 +118,56 @@ section.club
                             td 600 руб/час
                             td 300 руб/час
                             td 500 руб/час
+            .club__price-item.is-mobile(style="margin-top: 15px")
+                table
+                    tbody
+                        tr
+                            td(colspan="2").is-big Пакеты
+                        tr
+                            th Дни недели
+                            th Пакет «День»<br>13:00 - 18:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 280 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 400 руб/час
+            .club__price-item.is-mobile
+                table
+                    tbody
+                        tr
+                            th Дни недели
+                            th Пакет «Вечер»<br>18:00 - 00:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 500 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 600 руб/час
+            .club__price-item.is-mobile
+                table
+                    tbody
+                        tr
+                            th Дни недели
+                            th Пакет «1/2 ночь»<br>00:00 - 04:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 250 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 300 руб/час
+            .club__price-item.is-mobile
+                table
+                    tbody
+                        tr
+                            th Дни недели
+                            th Пакет «Ночь»<br>00:00 - 08:00
+                        tr.to-bottom
+                            td Пн - Пт
+                            td 400 руб/час
+                        tr.to-top
+                            td Сб - Вс
+                            td 500 руб/час
     .club__contacts
         .club__contacts-title
             img(src="assets/images/about-logo.png" alt="")
@@ -90,7 +176,6 @@ section.club
             each item in socItems
                 +socItem(item)
         .club__contacts-map
-            #map
             .club__contacts-address
                 .contacts__item
                     .contacts__item-image
@@ -107,5 +192,6 @@ section.club
                         img(src="assets/images/icons/mail.png" alt="")
                     .contacts__item-text
                         a(href="mailto:info@cyberx-franchise.ru") info@cyberx-franchise.ru
+            #map
             
         

@@ -26,6 +26,25 @@
             }
         }
     }
+
+    @include mq(749) {
+        .about__logo {
+            padding: 18px 0;
+
+            img {
+                width: 160px;
+            }
+        }
+
+        .about__title {
+            padding: 19px 0 9px;
+
+            h2 {
+                font-size: 25px;
+                line-height: 29px;
+            }
+        }
+    }
     
     &__crumbs {
         position: absolute;
@@ -40,6 +59,11 @@
         @include mq(1199) {
             top: -319px;
             background: none;
+        }
+
+        @include mq(749) {
+            top: -323px;
+            border: none;
         }
     }
 
@@ -72,11 +96,15 @@
         );
 
         @include mq(1199) {
-            width: 750px;
+            max-width: 750px;
             padding: 21px 0 40px;
             background: none;
             margin: 0 auto;
             overflow: hidden;
+        }
+
+        @include mq(749) {
+            padding: 15px 0 35px;
         }
     }
 
@@ -119,6 +147,20 @@
         } 
     }
 
+    @include mq(749) {
+
+        &__gallery-content--wrapp {
+            width: 400vw;
+        }
+
+        &__gallery-item,
+        &__gallery-item--wide {
+            width: calc(100vw - 30px);
+            height: 300px;
+            margin: 0 15px;
+        }
+    }
+
     &__gallery-arrow-left,
     &__gallery-arrow-right {
         display: none;
@@ -128,13 +170,26 @@
             position: absolute;
             top: 45%;
         }
+
+        @include mq(749) {
+            top: 43%;
+        }
     }
 
     &__gallery-arrow-left {
         left: calc(50% - 375px);
+
+        @include mq(749) {
+            left: -10px;
+        }
     }
+
     &__gallery-arrow-right {
         right: calc(50% - 375px);
+
+        @include mq(749) {
+            right: -10px;
+        }
     }
 
     &__gadgets {
@@ -144,6 +199,10 @@
 
         @include mq(1199) {
             height: 284px;
+        }
+
+        @include mq(749) {
+            height: 236px;
         }
     }
 
@@ -163,11 +222,23 @@
                 font-size: 28px;
             }
         }
+
+        @include mq(749) {
+            padding: 30px 0 18px;
+
+            h2 {
+                font-size: 26px;
+            }
+        }
     }
 
     &__gadgets-items {
         font-size: 0;
         text-align: center;
+
+        @include mq(749) {
+            padding: 0 15px;
+        }
     }
 
     &__gadgets-item {
@@ -218,6 +289,32 @@
             }
         }
 
+        @include mq(749) {
+            width: 32%;
+
+            img {
+                height: 65px;
+                margin: 7px 0 18px;
+            }
+
+            h3 {
+                font-size: 19px;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 0 0 5px;
+            }
+
+            &:nth-child(2) {
+                width: 32%;
+                border: none;
+            }
+
+            &:first-child {
+                width: 36%;
+            }
+        }
     }
 
     &__price {
@@ -225,6 +322,14 @@
         background: url(./../images/club-price-bg.png) center center no-repeat;
         background-size: cover;
         color: #fff;
+
+        @include mq(1199) {
+            height: 457px;
+        }
+
+        @include mq(749) {
+            height: auto;
+        }
     }
 
     &__price-title {
@@ -252,6 +357,19 @@
                 font-size: 20px;
             }
         }
+
+        @include mq(749) {
+            padding: 28px 0 11px;
+
+            h2 {
+                font-size: 26px;
+            }
+
+            p {
+                padding: 0 50px;
+                font-size: 18px;
+            }
+        }
     }
 
     &__price-content {
@@ -259,12 +377,20 @@
         max-width: 1300px;
         padding: 15px;
         margin: 0 auto;
+
+        @include mq(1199) {
+            width: 750px;
+        }
+
+        @include mq(749) {
+            width: auto;
+        }
     }
 
     &__price-item {
         padding: 1px;
         border-radius: 3px;
-        background-image: linear-gradient(to bottom, #bf1f2f, #fff);
+        background-image: linear-gradient(to bottom, #bf1f2f, #fbfbfb);
         overflow: hidden;
         margin: 0 0 32px;
 
@@ -316,10 +442,61 @@
             font-family: "9928";
             font-size: 23px;
         }
-    }
 
-    &__contacts {
+        &.is-mobile {
+            display: none;
+        }
 
+        @include mq(1199) {
+            margin: 0 0 10px;
+            th,
+            td {
+
+                &:first-child {
+                    width: 23.9%;
+                }
+            }
+
+            &:last-child {
+                th,
+                td {
+
+                    &:first-child {
+                        width: 19.5%;
+                    }
+                }
+            }
+        }
+
+        @include mq(749) {
+
+            &.is-desctop {
+                display: none;
+            }
+
+            &.is-mobile {
+                display: block;
+            }
+
+            th,
+            td {
+
+                &:first-child {
+                    width: 50%;
+                }
+            }
+
+            &:last-child {
+
+                th,
+                td {
+
+                    &:first-child {
+                        width: 50%;
+                    }
+                }
+            }
+        }
     }
 
     &__contacts-title {
@@ -336,20 +513,22 @@
         }
 
         @include mq(1199) {
-            padding: 22px 0 28px;
+            padding: 7px 0 13px;
             font-size: 28px;
 
             img {
                 width: 200px;
-                transform: translate3d(6px, 7px, 0);
+                transform: translate3d(7px, 21px, 0);
                 margin: 0 21px 0 0;
             }
         }
 
         @include mq(749) {
-            padding: 22px 0 35px;
+            padding: 27px 0 9px;
+            font-size: 26px;
 
             img {
+                transform: translate3d(0, 0, 0);
                 margin: 0;
             }
 
@@ -363,6 +542,15 @@
         display: flex;
         justify-content: center;
         padding: 20px 0 40px;
+
+        @include mq(1199) {
+            padding: 20px 0 19px;
+        }
+
+        @include mq(749) {
+            flex-wrap: wrap;
+            padding: 20px 50px 0;
+        }
     }
 
     &__soc-item {
@@ -374,6 +562,16 @@
         border-radius: 50%;
         background-color: #bf1e2e;
         margin: 0 5px;
+
+        @include mq(1199) {
+            width: 42px;
+            height: 42px;
+            margin: 0 4.2px;
+        }
+
+        @include mq(749) {
+            margin: 0 5px 10px;
+        }
     }
 
     &__contacts-map {
@@ -384,16 +582,41 @@
             width: 100%;
             height: 100%;
         }
+
+        @include mq(1199) {
+            height: auto;
+
+            #map {
+                height: 380px;
+            }
+        }
+
+        @include mq(749) {
+            #map {
+                height: 300px;
+            }
+        }
     }
 
     &__contacts-address {
         position: absolute;
+        z-index: 2;
         top: 0;
         left: 0;
         width: 50%;
         height: 100%;
         padding: 112px 0 0 calc(50% - 650px);
         background-color: rgba(#fff, 0.8);
+
+        @include mq(1199) {
+            position: relative;
+            width: auto;
+            padding: 0 0 9px calc(50% - 190px);
+        }
+
+        @include mq(749) {
+            padding: 0 0 23px;
+        }
     }
 }
 

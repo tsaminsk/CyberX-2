@@ -37,7 +37,17 @@
             }
 
         }
+        
+        @include mq(749) {
+            .slider__item {
+                padding: 98px 0 0 15px;
+            }
 
+            .slider__item-title {
+                width: auto;
+                letter-spacing: -0.5px;
+            }
+        }
     }
 
     &__img {
