@@ -1,0 +1,19 @@
+.popup.js-popup
+    .popup__wrap
+        .popup__title Заказать звонок
+        .popup__content
+            form.ajax_form.popup__form(action="#" method="post")
+                span.error_name
+                input(type="text" id="popup-name" name="name" placeholder="ФИО" value="")
+                //.is-error
+                span.error_phone
+                input(type="tel" id="popup-phone" class="phone_mask" name="phone" placeholder="Телефон" value="")
+                span.error_email
+                textarea(type="text" id="popup-text" name="text" placeholder="Текст сообщения" value="")
+                button.button--red#popup__submited-button
+                    span Получить доступ
+                input(type="hidden" name="af_action" value="fc6aabaf83f891f0d1212263ac1490c2")
+        .popup__close
+            a(href="javascript:void(0)").js-popup-close
+                img(src="assets/images/icons/close.png", alt="")
+            //- .icon icon-close</div>

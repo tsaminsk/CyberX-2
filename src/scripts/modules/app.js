@@ -4,6 +4,44 @@ var currentClubsItem;
 var clubsItems;
 
 window.onload = function () {
+
+    $('.js-mob-menu-open').on('click', function (event) {
+        event.preventDefault();
+        $('.js-mob-menu').fadeIn(500);
+    });
+
+    $('.js-mob-menu-close').on('click', function (event) {
+        event.preventDefault();
+        $('.js-mob-menu').fadeOut(500);
+    });
+
+    $('.js-popup-open').on('click', function (event) {
+        event.preventDefault();
+        $('.js-popup').fadeIn(500);
+    });
+
+    $('.js-popup-close').on('click', function (event) {
+        event.preventDefault();
+        $('.js-popup').fadeOut(500);
+    });
+
+    $('.phone_mask ').mask("+7(999) 999-99-99");
+
+    setNumbersAnimaition(".about__numbers", 4, "#js-num");
+
+    setNumbersAnimaition(".club__gadgets", 3, "#js-club-num");
+
+    if ($('.js-requisites')) {
+        $('.js-requisites-open').on('click', function (event) {
+            event.preventDefault();
+            $('.js-requisites').fadeToggle(500);
+        });
+        $('.js-requisites-close').on('click', function (event) {
+            event.preventDefault();
+            $('.js-requisites').fadeOut(500);
+        });
+    }
+
     if (document.querySelector('#map') != null) {
         ymaps.ready(init(coords));
     }

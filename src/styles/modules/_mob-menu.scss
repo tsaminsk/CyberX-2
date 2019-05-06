@@ -1,0 +1,44 @@
+.mob-menu {
+    display: none;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: calc(50% - 375px);
+    width: 355px;
+    height: 100vh;
+    padding: 40px 0 0;
+    background-color: #2d2d2d;
+
+    @include mq(749) {
+        left: 0;
+        width: 100%;
+    }
+
+    &__lists {
+        padding: 40px 0 0 76px;
+
+        li {
+            margin: 0 0 30px;
+
+            &.is-active a {
+                color: #bf1e2e;
+            }
+        }
+
+        a {
+            font-family: "RoadRadio";
+            font-size: 16px;
+            line-height: 1;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        display: inline-block;
+        vertical-align: top;
+    }
+}

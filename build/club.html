@@ -14,9 +14,20 @@
 </head>
 
 <body>
+    <div class="mob-menu js-mob-menu">
+        <div class="mob-menu__close"><a class="js-mob-menu-close" href="javascript:void(0)"><img src="assets/images/icons/close.png" alt=""></a></div>
+        <ul class="mob-menu__lists">
+            <li><a href="/">CyberX</a></li>
+            <li><a href="/clubs.html">Клубы</a></li>
+            <li><a href="/services.html">Услуги</a></li>
+            <li><a href="/news.html">Новости</a></li>
+            <li><a href="/contacts.html">Контакты</a></li>
+            <li><a href="https://www.cyberx-franchise.ru/">Франшиза</a></li>
+        </ul>
+    </div>
     <header class="header">
         <div class="header__inner">
-            <div class="header__mobile"><a href="#"><img src="assets/images/icons/menu.png" alt=""></a></div>
+            <div class="header__mobile"><a class="js-mob-menu-open" href="javascript:void(0)"><img src="assets/images/icons/menu.png" alt=""></a></div>
             <div class="header__logo"><a href="/"><img src="assets/images/logo.png" alt=""></a></div>
             <ul class="header__nuv">
                 <li><a href="/">CyberX</a></li>
@@ -26,7 +37,7 @@
                 <li><a href="/contacts.html">Контакты</a></li>
                 <li><a href="https://www.cyberx-franchise.ru/">Франшиза</a></li>
             </ul>
-            <div class="header__phone"><a class="phone" href="#"><img src="assets/images/icons/phone-icon.png" title="Заказать звонок" alt=""></a><a href="tel:+74992882735">8 499 288 27 35</a></div>
+            <div class="header__phone"><a class="phone js-popup-open" href="javascript:void(0)"><img src="assets/images/icons/phone-icon.png" title="Заказать звонок" alt=""></a><a href="tel:+74992882735">8 499 288 27 35</a></div>
         </div>
         <div class="header__decor"></div>
     </header>
@@ -50,10 +61,10 @@
             </div>
         </div>
         <div class="slider__pagination">
-            <div class="pagination js-slider-pagination"><a class="pagination-item is-active" href=""></a><a class="pagination-item" href=""></a><a class="pagination-item" href=""></a><a class="pagination-item" href=""></a></div>
+            <div class="pagination js-slider-pagination"><a class="pagination-item is-active" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a></div>
         </div>
-        <div class="slider__arrow-left js-slider-left"><a href="#"><img src="assets/images/icons/slider-arrow.png" alt=""></a></div>
-        <div class="slider__arrow-right js-slider-right"><a href="#"><img class="rotate180" src="assets/images/icons/slider-arrow.png" alt=""></a></div>
+        <div class="slider__arrow-left js-slider-left"><a href="javascript:void(0)"><img src="assets/images/icons/slider-arrow.png" alt=""></a></div>
+        <div class="slider__arrow-right js-slider-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/slider-arrow.png" alt=""></a></div>
     </div>
     <section class="club">
         <div class="club__about">
@@ -78,8 +89,8 @@
                     <div class="club__gallery-item"><img src="assets/images/club-gallery-4.png" alt=""></div>
                 </div>
             </div>
-            <div class="club__gallery-arrow-left"><a href="#"><img src="assets/images/icons/formats-arrow.png" alt=""></a></div>
-            <div class="club__gallery-arrow-right"><a href="#"><img class="rotate180" src="assets/images/icons/formats-arrow.png" alt=""></a></div>
+            <div class="club__gallery-arrow-left"><a href="javascript:void(0)"><img src="assets/images/icons/formats-arrow.png" alt=""></a></div>
+            <div class="club__gallery-arrow-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/formats-arrow.png" alt=""></a></div>
         </div>
         <div class="club__gadgets">
             <div class="club__gadgets-title">
@@ -87,15 +98,15 @@
             </div>
             <div class="club__gadgets-items">
                 <div class="club__gadgets-item"><img src="assets/images/icons/club-gadget-1.png" alt="">
-                    <h3>15</h3>
+                    <h3 id="js-club-num1">15</h3>
                     <p>игровых машин</p>
                 </div>
                 <div class="club__gadgets-item"><img src="assets/images/icons/club-gadget-2.png" alt="">
-                    <h3>134</h3>
+                    <h3 id="js-club-num2">134</h3>
                     <p>кв. метра</p>
                 </div>
                 <div class="club__gadgets-item"><img src="assets/images/icons/club-gadget-3.png" alt="">
-                    <h3>2</h3>
+                    <h3 id="js-club-num3">2</h3>
                     <p>SonyPS4</p>
                 </div>
             </div>
@@ -313,46 +324,67 @@
                 </div>
             </div>
     </section>
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__title">Заказать звонок</div>
+            <div class="popup__content">
+                <form class="ajax_form popup__form" action="#" method="post"><span class="error_name"></span><input type="text" id="popup-name" name="name" placeholder="ФИО" value="">
+                    <!--.is-error--><span class="error_phone"></span><input class="phone_mask" type="tel" id="popup-phone" name="phone" placeholder="Телефон" value=""><span class="error_email"></span><textarea type="text" id="popup-text" name="text" placeholder="Текст сообщения" value=""></textarea><button class="button--red" id="popup__submited-button"><span>Получить доступ</span></button><input type="hidden" name="af_action" value="fc6aabaf83f891f0d1212263ac1490c2"></form>
+            </div>
+            <div class="popup__close"><a class="js-popup-close" href="javascript:void(0)"><img src="assets/images/icons/close.png" alt=""></a></div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer__top">
-            <div class="container"><a href="#">Реквизиты</a></div>
-        </div>
-        <div class="footer__content">
-            <div class="footer__main">
-                <div class="container">
-                    <div class="footer__contacts">
-                        <h4>Контакты</h4>
-                        <div class="footer__contacts-item">
-                            <div class="footer__contacts-item--image"><img src="assets/images/icons/point.png" alt=""></div>
-                            <div class="footer__contacts-item--text">Москва, <br> улица Архитектора Власова, 55</div>
-                            </div>
-                            <div class="footer__contacts-item">
-                                <div class="footer__contacts-item--image"><img src="assets/images/icons/phone-red.png" alt=""></div>
-                                <div class="footer__contacts-item--text"><a href="tel:8-499-288-27-35">8-499-288-27-35</a></div>
-                            </div>
-                            <div class="footer__contacts-item">
-                                <div class="footer__contacts-item--image"><img src="assets/images/icons/mail.png" alt=""></div>
-                                <div class="footer__contacts-item--text"><a href="mailto:info@cyberx-franchise.ru">info@cyberx-franchise.ru</a></div>
-                            </div>
-                            <div class="footer__contacts-soc"><a href="#"> <img src="assets/images/icons/soc.png" alt=""></a></div>
+            <div class="container"><a class="js-requisites-open" href="javascript:void(0)">Реквизиты</a>
+                <div class="footer__requisites js-requisites">
+                    <div class="footer__requisites-title">Реквизиты <br>управляющей компании</div>
+                        <div class="footer__requisites-content">
+                            <p>ООО "РИКИС"</p>
+                            <p>ИНН: 2368010296</p>
+                            <p>Почтовый адрес: 352630, Краснодарский кр, город Белореченск, район Белореченский, улица Интернациональная, дом 30</p>
+                            <p>ОГРН: 1182375044697</p>
                         </div>
-                        <div class="footer__feedback">
-                            <h4>Обратная связь</h4>
-                            <form class="footer__form ajax_form" action="#" method="post">
-                                <div class="form-inputs-col"><input type="text" id="form-name" name="name" placeholder="ФИО" value=""><input class="is-error" type="email" id="form-email" name="email" placeholder="EMAIL" value=""></div>
-                                <div class="form-inputs-col"><input class="phone_mask" type="tel" id="form-phone" name="phone" placeholder="Номер вашего телефона" value=""><textarea type="text" id="fort-text" name="text" placeholder="ТЕКСТ СООБЩЕНИЯ"> </textarea></div>
-                                <div class="form-submit"><button class="is-disabled" type="submit">Отправить</button></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__bottom">
-                    <div class="container">
-                        <div class="footer__copy">© 2016–2019 ООО "РИКИС". Все права защищены</div>
-                        <div class="footer__desiner"><a href="#">Автор дизайна</a></div>
+                        <div class="footer__requisites-close"><a class="js-requisites-close" href="javascript:void(0)"><img src="assets/images/icons/close.png" alt=""></a></div>
                     </div>
                 </div>
             </div>
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="container">
+                        <div class="footer__contacts">
+                            <h4>Контакты</h4>
+                            <div class="footer__contacts-item">
+                                <div class="footer__contacts-item--image"><img src="assets/images/icons/point.png" alt=""></div>
+                                <div class="footer__contacts-item--text">Москва, <br> улица Архитектора Власова, 55</div>
+                                </div>
+                                <div class="footer__contacts-item">
+                                    <div class="footer__contacts-item--image"><img src="assets/images/icons/phone-red.png" alt=""></div>
+                                    <div class="footer__contacts-item--text"><a href="tel:8-499-288-27-35">8-499-288-27-35</a></div>
+                                </div>
+                                <div class="footer__contacts-item">
+                                    <div class="footer__contacts-item--image"><img src="assets/images/icons/mail.png" alt=""></div>
+                                    <div class="footer__contacts-item--text"><a href="mailto:info@cyberx-franchise.ru">info@cyberx-franchise.ru</a></div>
+                                </div>
+                                <div class="footer__contacts-soc"><a href="#"> <img src="assets/images/icons/soc.png" alt=""></a></div>
+                            </div>
+                            <div class="footer__feedback">
+                                <h4>Обратная связь</h4>
+                                <form class="footer__form ajax_form" action="#" method="post">
+                                    <div class="form-inputs-col"><input type="text" id="form-name" name="name" placeholder="ФИО" value=""><input class="is-error" type="email" id="form-email" name="email" placeholder="EMAIL" value=""></div>
+                                    <div class="form-inputs-col"><input class="phone_mask" type="tel" id="form-phone" name="phone" placeholder="Номер вашего телефона" value=""><textarea type="text" id="fort-text" name="text" placeholder="ТЕКСТ СООБЩЕНИЯ"> </textarea></div>
+                                    <div class="form-submit"><button class="is-disabled" type="submit">Отправить</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="container">
+                            <div class="footer__copy">© 2016–2019 ООО "РИКИС". Все права защищены</div>
+                            <div class="footer__desiner"><a href="mailto:wkalininam@gmail.com " target="_blank">Автор дизайна</a></div>
+                        </div>
+                    </div>
+                </div>
     </footer>
     <script src="./assets/scripts/libs.min.js"></script>
     <script src="./assets/scripts/script.min.js"></script>

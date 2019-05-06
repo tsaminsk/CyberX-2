@@ -1,8 +1,20 @@
 mixin headerBlock(nav, current, headerClass)
+    .mob-menu.js-mob-menu
+        .mob-menu__close
+            a(href="javascript:void(0)").js-mob-menu-close
+                img(src="assets/images/icons/close.png", alt="")
+        ul.mob-menu__lists
+            each item in nav
+                if item.url === current
+                    li.is-active
+                        a(href=item.url)= item.name
+                else
+                    li
+                        a(href=item.url)= item.name
     header.header(class=headerClass)
         .header__inner
             .header__mobile
-                a(href="#")
+                a(href="javascript:void(0)").js-mob-menu-open
                     img(src="assets/images/icons/menu.png", alt="")
             .header__logo
                 a(href="/")
@@ -16,10 +28,10 @@ mixin headerBlock(nav, current, headerClass)
                         li
                             a(href=item.url)= item.name
             .header__phone
-                a.phone(href="#")
+                a.phone(href="javascript:void(0)").js-popup-open
                     img(src="assets/images/icons/phone-icon.png" title="Заказать звонок" alt="")
                 a(href="tel:+74992882735")
-                    |8 499 288 27 35
+                    | 8 499 288 27 35
         .header__decor
 
 
@@ -46,15 +58,15 @@ mixin slider(image, type, className)
                             | заголовка на&nbsp;баннере</span>
         .slider__pagination
             .pagination.js-slider-pagination
-                a(href="").pagination-item.is-active
-                a(href="").pagination-item
-                a(href="").pagination-item
-                a(href="").pagination-item
+                a(href="javascript:void(0)").pagination-item.is-active
+                a(href="javascript:void(0)").pagination-item
+                a(href="javascript:void(0)").pagination-item
+                a(href="javascript:void(0)").pagination-item
         .slider__arrow-left.js-slider-left
-            a(href="#")
+            a(href="javascript:void(0)")
                 img(src="assets/images/icons/slider-arrow.png" alt="")
         .slider__arrow-right.js-slider-right
-            a(href="#")
+            a(href="javascript:void(0)")
                 img(src="assets/images/icons/slider-arrow.png" alt="").rotate180
 
 mixin ciberCommunity(text, text2, text3)

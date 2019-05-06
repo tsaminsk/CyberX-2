@@ -1,12 +1,14 @@
 function init(coords) {
     myMap = new ymaps.Map("map", {
         center: coords,
-        zoom: 9,
+        zoom: 5,
         controls: []
     }, {
         suppressMapOpenBlock: true,
         searchControlProvider: 'yandex#search'
     });
+
+    myMap.behaviors.disable('scrollZoom');
 
     var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
         '<div style="color: #000; font-weight: bold;">$[properties.iconContent]</div>'

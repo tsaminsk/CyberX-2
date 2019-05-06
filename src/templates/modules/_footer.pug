@@ -1,7 +1,18 @@
 footer.footer
     .footer__top
         .container
-            a(href="#") Реквизиты
+            a(href="javascript:void(0)").js-requisites-open Реквизиты
+            .footer__requisites.js-requisites
+                .footer__requisites-title
+                    | Реквизиты <br>управляющей компании
+                .footer__requisites-content
+                    p ООО "РИКИС"
+                    p ИНН: 2368010296
+                    p Почтовый адрес: 352630, Краснодарский кр, город Белореченск, район Белореченский, улица Интернациональная, дом 30
+                    p ОГРН: 1182375044697
+                .footer__requisites-close
+                    a(href="javascript:void(0)").js-requisites-close
+                        img(src="assets/images/icons/close.png", alt="")
     .footer__content
         .footer__main
             .container
@@ -41,7 +52,7 @@ footer.footer
                 .footer__copy
                     | © 2016–2019 ООО "РИКИС". Все права защищены
                 .footer__desiner
-                    a(href="#") Автор дизайна
+                    a(href="mailto:wkalininam@gmail.com " target="_blank") Автор дизайна
                 
 
     
