@@ -63,8 +63,12 @@
         <div class="slider__pagination">
             <div class="pagination js-slider-pagination"><a class="pagination-item is-active" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a></div>
         </div>
-        <div class="slider__arrow-left js-slider-left"><a href="javascript:void(0)"><img src="assets/images/icons/slider-arrow.png" alt=""></a></div>
-        <div class="slider__arrow-right js-slider-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/slider-arrow.png" alt=""></a></div>
+        <div class="slider__arrow-left js-slider-left"><a href="javascript:void(0)">
+                <div class="icon icon-slider-arrow"></div>
+            </a></div>
+        <div class="slider__arrow-right js-slider-right"><a href="javascript:void(0)">
+                <div class="icon icon-slider-arrow rotate180"></div>
+            </a></div>
     </div>
     <section class="club">
         <div class="club__about">
@@ -89,23 +93,30 @@
                     <div class="club__gallery-item"><img src="assets/images/club-gallery-4.png" alt=""></div>
                 </div>
             </div>
-            <div class="club__gallery-arrow-left"><a href="javascript:void(0)"><img src="assets/images/icons/formats-arrow.png" alt=""></a></div>
-            <div class="club__gallery-arrow-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/formats-arrow.png" alt=""></a></div>
+            <div class="club__gallery-arrow-left"><a href="javascript:void(0)">
+                    <div class="icon icon-formats-arrow"></div>
+                </a></div>
+            <div class="club__gallery-arrow-right"><a href="javascript:void(0)">
+                    <div class="icon icon-formats-arrow rotate180"></div>
+                </a></div>
         </div>
         <div class="club__gadgets">
             <div class="club__gadgets-title">
                 <h2>Игровые устройства</h2>
             </div>
             <div class="club__gadgets-items">
-                <div class="club__gadgets-item"><img src="assets/images/icons/club-gadget-1.png" alt="">
+                <div class="club__gadgets-item">
+                    <div class="icon icon-club-gadget-1"></div>
                     <h3 id="js-club-num1">15</h3>
                     <p>игровых машин</p>
                 </div>
-                <div class="club__gadgets-item"><img src="assets/images/icons/club-gadget-2.png" alt="">
+                <div class="club__gadgets-item">
+                    <div class="icon icon-club-gadget-2"></div>
                     <h3 id="js-club-num2">134</h3>
                     <p>кв. метра</p>
                 </div>
-                <div class="club__gadgets-item"><img src="assets/images/icons/club-gadget-3.png" alt="">
+                <div class="club__gadgets-item">
+                    <div class="icon icon-club-gadget-3"></div>
                     <h3 id="js-club-num3">2</h3>
                     <p>SonyPS4</p>
                 </div>
@@ -304,23 +315,43 @@
         </div>
         <div class="club__contacts">
             <div class="club__contacts-title"><img src="assets/images/about-logo.png" alt=""><span>в сетях</span></div>
-            <div class="club__contacts-soc"><a class="club__soc-item" href="#"><img src="assets/images/icons/soc-youtube.png" alt=""></a><a class="club__soc-item" href="#"><img src="assets/images/icons/soc-hz.png" alt=""></a><a class="club__soc-item" href="#"><img src="assets/images/icons/soc-fb.png" alt=""></a><a class="club__soc-item" href="#"><img src="assets/images/icons/soc-inst.png" alt=""></a><a class="club__soc-item" href="#"><img src="assets/images/icons/soc-wtapp.png" alt=""></a><a class="club__soc-item" href="#"><img src="assets/images/icons/soc-telegr.png" alt=""></a><a class="club__soc-item" href="#"><img src="assets/images/icons/soc-tw.png" alt=""></a></div>
+            <div class="club__contacts-soc"><a class="club__soc-item" href="#">
+                    <div class="icon icon-soc-youtube"></div>
+                </a><a class="club__soc-item" href="#">
+                    <div class="icon icon-soc-hz"></div>
+                </a><a class="club__soc-item" href="#">
+                    <div class="icon icon-soc-fb"></div>
+                </a><a class="club__soc-item" href="#">
+                    <div class="icon icon-soc-inst"></div>
+                </a><a class="club__soc-item" href="#">
+                    <div class="icon icon-soc-wtapp"></div>
+                </a><a class="club__soc-item" href="#">
+                    <div class="icon icon-soc-telegr"></div>
+                </a><a class="club__soc-item" href="#">
+                    <div class="icon icon-soc-tw"></div>
+                </a></div>
             <div class="club__contacts-map">
                 <div class="club__contacts-address">
                     <div class="contacts__item">
-                        <div class="contacts__item-image"><img src="assets/images/icons/point.png" alt=""></div>
+                        <div class="contacts__item-image">
+                            <div class="icon icon-point"></div>
+                        </div>
                         <div class="contacts__item-text">Москва, <br> улица Архитектора Власова,&nbsp;55</div>
                         </div>
                         <div class="contacts__item">
-                            <div class="contacts__item-image"><img src="assets/images/icons/phone-red.png" alt=""></div>
+                            <div class="contacts__item-image">
+                                <div class="icon icon-phone-red"></div>
+                            </div>
                             <div class="contacts__item-text"><a href="tel:8-499-288-27-35">8-499-288-27-35</a></div>
                         </div>
                         <div class="contacts__item">
-                            <div class="contacts__item-image"><img src="assets/images/icons/mail.png" alt=""></div>
+                            <div class="contacts__item-image">
+                                <div class="icon icon-mail"></div>
+                            </div>
                             <div class="contacts__item-text"><a href="mailto:info@cyberx-franchise.ru">info@cyberx-franchise.ru</a></div>
                         </div>
                     </div>
-                    <div id="map"></div>
+                    <div id="map" data-params="[{&quot;name&quot;:&quot;Gaming Club&quot;,&quot;address&quot;:&quot;г. Москва, улица Архитектора Власова, 55&quot;,&quot;descr&quot;:&quot;ООО \&quot;РИКИС\&quot;&quot;,&quot;coords&quot;:[55.664248,37.543327],&quot;city&quot;:&quot;Иркутск&quot;}]" data-mapparams="{&quot;center&quot;:[55.664248,37.533327],&quot;zoom&quot;:16}"></div>
                 </div>
             </div>
     </section>

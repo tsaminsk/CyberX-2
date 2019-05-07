@@ -28,7 +28,7 @@
             height: 318px;
 
             .slider__item {
-                padding: 101px 0 0 15.6vw;
+                padding: 101px 0 0 calc(50vw - 345px);
             }
 
             .slider__arrow-left,
@@ -174,12 +174,7 @@
 
         @include mq(1199) {
             top: 123px;
-            width: 35px;
             overflow: hidden;
-
-            img {
-                width: 45px;
-            }
         }
     }
 
@@ -187,15 +182,15 @@
         left: 0;
 
         @include mq(1199) {
-            left: calc(50% - 375px);
+            left: calc(50% - 395px);
 
-            img {
-                margin: 0 0 0 -10px;
+            .icon {
+                transform: scale(0.54);
             }
         }
 
         @include mq(749) {
-            left: 0;
+            left: -20px;
         }
     }
 
@@ -203,15 +198,15 @@
         right: 0;
 
         @include mq(1199) {
-            right: calc(50% - 375px);
+            right: calc(50% - 395px);
 
-            img {
-                margin: 0 -10px 0 0;
+            .icon {
+                transform: scale(0.54) rotate(180deg);
             }
         }
 
         @include mq(749) {
-            right: 0;
+            right: -20px;
         }
     }
 }

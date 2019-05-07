@@ -67,8 +67,12 @@ CyberX - <span>пример <br>
         <div class="slider__pagination">
             <div class="pagination js-slider-pagination"><a class="pagination-item is-active" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a><a class="pagination-item" href="javascript:void(0)"></a></div>
         </div>
-        <div class="slider__arrow-left js-slider-left"><a href="javascript:void(0)"><img src="assets/images/icons/slider-arrow.png" alt=""></a></div>
-        <div class="slider__arrow-right js-slider-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/slider-arrow.png" alt=""></a></div>
+        <div class="slider__arrow-left js-slider-left"><a href="javascript:void(0)">
+                <div class="icon icon-slider-arrow"></div>
+            </a></div>
+        <div class="slider__arrow-right js-slider-right"><a href="javascript:void(0)">
+                <div class="icon icon-slider-arrow rotate180"></div>
+            </a></div>
     </div>
     <section class="about">
         <div class="about__logo"><img src="assets/images/about-logo.png" alt=""></div>
@@ -78,7 +82,7 @@ CyberX - <span>пример <br>
         </div>
         <div class="about__formats">
             <div class="about__formats-title">Наши форматы</div>
-            <div class="about__formats-items">
+            <div class="about__formats-items js-formats-slider">
                 <div class="about__formats-item" style="background-image: url(./assets/images/formats-1.png)">
                     <div class="about__formats-item--title">Лаунж бар с кибер-зоной <br>на 300 кв. метров</div>
                         <div class="about__formats-item--content">Кухня, зона отдыха, паровые коктейли, большой экран для просмотра трансляций крупнейших киберспортивных событий</div>
@@ -92,12 +96,16 @@ CyberX - <span>пример <br>
                                 <div class="about__formats-item--content">До 100 квадратных метров. От 30 до 40 игровых станций</div>
                             </div>
                         </div>
-                        <div class="about__formats-arrow-left"><a href="javascript:void(0)"><img src="assets/images/icons/formats-arrow.png" alt=""></a></div>
-                        <div class="about__formats-arrow-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/formats-arrow.png" alt=""></a></div>
+                        <div class="about__formats-arrow-left js-formats-slider-left"><a href="javascript:void(0)">
+                                <div class="icon icon-formats-arrow"></div>
+                            </a></div>
+                        <div class="about__formats-arrow-right js-formats-slider-right"><a href="javascript:void(0)">
+                                <div class="icon icon-formats-arrow rotate180"></div>
+                            </a></div>
                     </div>
                     <div class="about__preferens">
                         <div class="about__preferens-title">Наши преимущества</div>
-                        <div class="about__preferens-items">
+                        <div class="about__preferens-items js-preferens-slider">
                             <div class="about__preferens-item">
                                 <div class="about__preferens-item_img-wrapp">
                                     <div class="about__preferens-item_img" style="background-image: url(./assets/images/preferns-1.png)"></div>
@@ -117,8 +125,8 @@ CyberX - <span>пример <br>
                                 <div class="about__preferens-item_text">Cyber:X- это киберспорт. Еженедельно проводимые в Cyber:X турниры собирают огромную аудиторию и становятся точкой притяжения молодежи в своих городах.</div>
                             </div>
                         </div>
-                        <div class="about__preferens-arrow-left"><a href="javascript:void(0)"><img src="assets/images/icons/formats-arrow.png" alt=""></a></div>
-                        <div class="about__preferens-arrow-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/formats-arrow.png" alt=""></a></div>
+                        <div class="about__preferens-arrow-left js-preferens-slider-left"><a href="javascript:void(0)"><img src="assets/images/icons/formats-arrow.png" alt=""></a></div>
+                        <div class="about__preferens-arrow-right js-preferens-slider-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/formats-arrow.png" alt=""></a></div>
                     </div>
                     <div class="about__more">
                         <div class="about__more-title">Больше о нас</div>
@@ -139,17 +147,30 @@ CyberX - <span>пример <br>
                         <div class="about__photos">
                             <div class="about__photos-title">Фото заведений</div>
                             <div class="about__slider">
-                                <div class="about__slider-items">
+                                <div class="about__slider-items js-photos-slider">
                                     <div class="about__slider-item">
                                         <div class="about__slider-item_img"><img src="assets/images/about-slider-1.png" alt=""></div>
                                         <div class="about__slider-item_context">г. Москва, улица центральная 11</div>
                                     </div>
-                                    <div class="about__slider-item"></div>
-                                    <div class="about__slider-item"></div>
-                                    <div class="about__slider-item"></div>
+                                    <div class="about__slider-item">
+                                        <div class="about__slider-item_img"><img src="assets/images/about-slider-1.png" alt=""></div>
+                                        <div class="about__slider-item_context">г. Москва, улица центральная 12</div>
+                                    </div>
+                                    <div class="about__slider-item">
+                                        <div class="about__slider-item_img"><img src="assets/images/about-slider-1.png" alt=""></div>
+                                        <div class="about__slider-item_context">г. Москва, улица центральная 13</div>
+                                    </div>
+                                    <div class="about__slider-item">
+                                        <div class="about__slider-item_img"><img src="assets/images/about-slider-1.png" alt=""></div>
+                                        <div class="about__slider-item_context">г. Москва, улица центральная 14</div>
+                                    </div>
+                                    <div class="about__slider-item">
+                                        <div class="about__slider-item_img"><img src="assets/images/about-slider-1.png" alt=""></div>
+                                        <div class="about__slider-item_context">г. Москва, улица центральная 15</div>
+                                    </div>
                                 </div>
-                                <div class="about__slider-arrow-left"><a href="javascript:void(0)"><img src="assets/images/icons/about-arrow.png" alt=""><img src="assets/images/icons/formats-arrow.png" alt=""></a></div>
-                                <div class="about__sliderarrow-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/about-arrow.png" alt=""><img class="rotate180" src="assets/images/icons/formats-arrow.png" alt=""></a></div>
+                                <div class="about__slider-arrow-left js-photos-slider-left"><a href="javascript:void(0)"><img src="assets/images/icons/about-arrow.png" alt=""><img src="assets/images/icons/formats-arrow.png" alt=""></a></div>
+                                <div class="about__sliderarrow-right js-photos-slider-right"><a href="javascript:void(0)"><img class="rotate180" src="assets/images/icons/about-arrow.png" alt=""><img class="rotate180" src="assets/images/icons/formats-arrow.png" alt=""></a></div>
                             </div>
                         </div>
                         <div class="about__numbers">
@@ -185,7 +206,7 @@ CyberX - <span>пример <br>
                         <div class="about__map">
                             <div class="about__map-title"><span>Где уже есть</span><img src="assets/images/about-map-logo.png" alt=""></div>
                             <div class="about__map-wrapp">
-                                <div id="map"></div>
+                                <div id="map" data-params="[{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Москва, ул. центральная 19&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[55.613112,37.285735],&quot;city&quot;:&quot;Москва&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Москва, Большая Черемушкинская, 1&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[55.690278,37.601879],&quot;city&quot;:&quot;Москва&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Москва, Балаклавский проспект, 16&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[55.642199,37.60452],&quot;city&quot;:&quot;Москва&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;п. Ватутинки Московской обл.&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[55.505546,37.332097],&quot;city&quot;:&quot;Москва&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Санкт-Петербург&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[59.939095,30.315868],&quot;city&quot;:&quot;Питер&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Калининград&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[54.70739,20.507307],&quot;city&quot;:&quot;Калининград&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Иркутск&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[52.287054,104.281047],&quot;city&quot;:&quot;Иркутск&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Новороссийск&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[44.723912,37.768974],&quot;city&quot;:&quot;Новороссийск&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Геленджик&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[44.561141,38.076809],&quot;city&quot;:&quot;Геленджик&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Белореченск&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[44.761141,39.87114],&quot;city&quot;:&quot;Белореченск&quot;},{&quot;name&quot;:&quot;CyberX&quot;,&quot;address&quot;:&quot;г. Майкоп&quot;,&quot;descr&quot;:&quot;Games club&quot;,&quot;coords&quot;:[44.608865,40.098548],&quot;city&quot;:&quot;Майкоп&quot;}]"></div>
                             </div>
                         </div>
     </section>

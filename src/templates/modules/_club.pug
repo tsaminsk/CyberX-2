@@ -16,24 +16,29 @@ section.club
                     img(src="assets/images/club-gallery-4.png" alt="")
         .club__gallery-arrow-left
             a(href="javascript:void(0)")
-                img(src="assets/images/icons/formats-arrow.png" alt="")
+                .icon.icon-formats-arrow
+                //- img(src="assets/images/icons/formats-arrow.png" alt="")
         .club__gallery-arrow-right
             a(href="javascript:void(0)")
-                img(src="assets/images/icons/formats-arrow.png" alt="").rotate180
+                .icon.icon-formats-arrow.rotate180
+                //- img(src="assets/images/icons/formats-arrow.png" alt="").rotate180
     .club__gadgets
         .club__gadgets-title
             h2 Игровые устройства
         .club__gadgets-items
             .club__gadgets-item
-                img(src="assets/images/icons/club-gadget-1.png" alt="")
+                .icon.icon-club-gadget-1
+                //- img(src="assets/images/icons/club-gadget-1.png" alt="")
                 h3#js-club-num1 15
                 p игровых машин
             .club__gadgets-item
-                img(src="assets/images/icons/club-gadget-2.png" alt="")
+                .icon.icon-club-gadget-2
+                //- img(src="assets/images/icons/club-gadget-2.png" alt="")
                 h3#js-club-num2 134
                 p кв. метра
             .club__gadgets-item
-                img(src="assets/images/icons/club-gadget-3.png" alt="")
+                .icon.icon-club-gadget-3
+                //- img(src="assets/images/icons/club-gadget-3.png" alt="")
                 h3#js-club-num3 2
                 p SonyPS4
     .club__price
@@ -179,19 +184,22 @@ section.club
             .club__contacts-address
                 .contacts__item
                     .contacts__item-image
-                        img(src="assets/images/icons/point.png" alt="")
+                        .icon.icon-point
+                        //- img(src="assets/images/icons/point.png" alt="")
                     .contacts__item-text
                         | Москва, <br> улица Архитектора Власова,&nbsp;55
                 .contacts__item
                     .contacts__item-image
-                        img(src="assets/images/icons/phone-red.png" alt="")
+                        .icon.icon-phone-red
+                        //- img(src="assets/images/icons/phone-red.png" alt="")
                     .contacts__item-text
                         a(href="tel:8-499-288-27-35") 8-499-288-27-35
                 .contacts__item
                     .contacts__item-image
-                        img(src="assets/images/icons/mail.png" alt="")
+                        .icon.icon-mail
+                        //- img(src="assets/images/icons/mail.png" alt="")
                     .contacts__item-text
                         a(href="mailto:info@cyberx-franchise.ru") info@cyberx-franchise.ru
-            #map
+            #map(data-params=clubMap data-mapparams=clubMapParams )
             
         

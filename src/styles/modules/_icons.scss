@@ -1,0 +1,166 @@
+// @import "sprite";
+
+.icon {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.icon-about-arrow{
+    @include sprite($about-arrow);
+}
+
+.icon-about-num-1 {
+    @include sprite($about-num-1);
+}
+
+.icon-about-num-2 {
+    @include sprite($about-num-2);
+}
+
+.icon-about-num-3 {
+    @include sprite($about-num-3);
+}
+
+.icon-about-num-4 {
+    @include sprite($about-num-4);
+}
+
+.icon-about-num-5 {
+    @include sprite($about-num-5);
+}
+
+.icon-actions-red {
+    @include sprite($actions-red);
+}
+
+.icon-actions-white {
+    @include sprite($actions-white);
+}
+
+.icon-calendar-white {
+    @include sprite($calendar-white);
+}
+
+.icon-close {
+    @include sprite($close);
+}
+
+.icon-club-gadget-1 {
+    @include sprite($club-gadget-1);
+}
+
+.icon-club-gadget-2 {
+    @include sprite($club-gadget-2);
+}
+
+.icon-club-gadget-3 {
+    @include sprite($club-gadget-3);
+}
+
+.icon-clubs-arrow-left-red {
+    @include sprite($clubs-arrow-left-red);
+}
+
+.icon-clubs-arrow-red {
+    @include sprite($clubs-arrow-red);
+}
+
+.icon-clubs-arrow-white {
+    @include sprite($clubs-arrow-white);
+}
+
+.icon-clubs-arrow {
+    @include sprite($clubs-arrow);
+}
+
+.icon-clubs-item-day {
+    @include sprite($clubs-item-day);
+}
+
+.icon-clubs-item-pc {
+    @include sprite($clubs-item-pc);
+}
+
+.icon-clubs-item-time {
+    @include sprite($clubs-item-time);
+}
+
+.icon-clubs-item-vip {
+    @include sprite($clubs-item-vip);
+}
+
+.icon-crumbs-arrow-white {
+    @include sprite($crumbs-arrow-white);
+}
+
+.icon-crumbs-arrow {
+    @include sprite($crumbs-arrow);
+}
+
+.icon-formats-arrow {
+    @include sprite($formats-arrow);
+}
+
+.icon-inst {
+    @include sprite($inst);
+}
+
+.icon-mail {
+    @include sprite($mail);
+}
+
+.icon-menu {
+    @include sprite($menu);
+}
+
+.icon-nuv-active {
+    @include sprite($nuv-active);
+}
+
+.icon-phone-icon {
+    @include sprite($phone-icon);
+}
+
+.icon-phone-red {
+    @include sprite($phone-red);
+}
+
+.icon-point {
+    @include sprite($point);
+}
+
+.icon-slider-arrow {
+    @include sprite($slider-arrow);
+}
+
+.icon-soc-fb {
+    @include sprite($soc-fb);
+}
+
+.icon-soc-hz {
+    @include sprite($soc-hz);
+}
+
+.icon-soc-inst {
+    @include sprite($soc-inst);
+}
+
+.icon-soc-telegr {
+    @include sprite($soc-telegr);
+}
+
+.icon-soc-tw {
+    @include sprite($soc-tw);
+}
+
+.icon-soc-wtapp {
+    @include sprite($soc-wtapp);
+}
+
+.icon-soc-youtube {
+    @include sprite($soc-youtube);
+}
+
+.icon-soc {
+    @include sprite($soc);
+}

@@ -3,7 +3,7 @@ section.about
     .about__formats
         .about__formats-title
             | Наши форматы
-        .about__formats-items
+        .about__formats-items.js-formats-slider
             .about__formats-item(style="background-image: url(./assets/images/formats-1.png)")
                 .about__formats-item--title
                     | Лаунж бар с кибер-зоной <br>на 300 кв. метров
@@ -19,15 +19,17 @@ section.about
                     | Киберкорнеры в <br>торговых центрах
                 .about__formats-item--content
                     | До 100 квадратных метров. От 30 до 40 игровых станций
-        .about__formats-arrow-left
+        .about__formats-arrow-left.js-formats-slider-left
             a(href="javascript:void(0)")
-                img(src="assets/images/icons/formats-arrow.png" alt="")
-        .about__formats-arrow-right
+                .icon.icon-formats-arrow
+                //- img(src="assets/images/icons/formats-arrow.png" alt="")
+        .about__formats-arrow-right.js-formats-slider-right
             a(href="javascript:void(0)")
-                img(src="assets/images/icons/formats-arrow.png" alt="").rotate180
+                .icon.icon-formats-arrow.rotate180
+                //- img(src="assets/images/icons/formats-arrow.png" alt="").rotate180
     .about__preferens
         .about__preferens-title Наши преимущества
-        .about__preferens-items
+        .about__preferens-items.js-preferens-slider
             .about__preferens-item
                 .about__preferens-item_img-wrapp
                     .about__preferens-item_img(style="background-image: url(./assets/images/preferns-1.png)")
@@ -43,10 +45,10 @@ section.about
                     .about__preferens-item_img(style="background-image: url(./assets/images/preferns-3.png)")
                 .about__preferens-item_text
                     | Cyber:X- это киберспорт. Еженедельно проводимые в Cyber:X турниры  собирают огромную аудиторию и становятся точкой притяжения молодежи в своих городах.
-        .about__preferens-arrow-left
+        .about__preferens-arrow-left.js-preferens-slider-left
             a(href="javascript:void(0)")
                 img(src="assets/images/icons/formats-arrow.png" alt="")
-        .about__preferens-arrow-right
+        .about__preferens-arrow-right.js-preferens-slider-right
             a(href="javascript:void(0)")
                 img(src="assets/images/icons/formats-arrow.png" alt="").rotate180
     .about__more
@@ -66,20 +68,37 @@ section.about
     .about__photos
         .about__photos-title Фото заведений
         .about__slider
-            .about__slider-items
+            .about__slider-items.js-photos-slider
                 .about__slider-item
                     .about__slider-item_img
                         img(src="assets/images/about-slider-1.png" alt="")
                     .about__slider-item_context
                         | г. Москва, улица центральная 11
                 .about__slider-item
+                    .about__slider-item_img
+                        img(src="assets/images/about-slider-1.png" alt="")
+                    .about__slider-item_context
+                        | г. Москва, улица центральная 12
                 .about__slider-item
+                    .about__slider-item_img
+                        img(src="assets/images/about-slider-1.png" alt="")
+                    .about__slider-item_context
+                        | г. Москва, улица центральная 13
                 .about__slider-item
-            .about__slider-arrow-left
+                    .about__slider-item_img
+                        img(src="assets/images/about-slider-1.png" alt="")
+                    .about__slider-item_context
+                        | г. Москва, улица центральная 14
+                .about__slider-item
+                    .about__slider-item_img
+                        img(src="assets/images/about-slider-1.png" alt="")
+                    .about__slider-item_context
+                        | г. Москва, улица центральная 15
+            .about__slider-arrow-left.js-photos-slider-left
                 a(href="javascript:void(0)")
                     img(src="assets/images/icons/about-arrow.png" alt="")
                     img(src="assets/images/icons/formats-arrow.png" alt="")
-            .about__sliderarrow-right
+            .about__sliderarrow-right.js-photos-slider-right
                 a(href="javascript:void(0)")
                     img(src="assets/images/icons/about-arrow.png" alt="").rotate180
                     img(src="assets/images/icons/formats-arrow.png" alt="").rotate180
@@ -123,4 +142,4 @@ section.about
             span Где уже есть
             img(src="assets/images/about-map-logo.png" alt="")
         .about__map-wrapp
-            div#map
+            #map(data-params=allClubs)

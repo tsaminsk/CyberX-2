@@ -64,10 +64,12 @@ mixin slider(image, type, className)
                 a(href="javascript:void(0)").pagination-item
         .slider__arrow-left.js-slider-left
             a(href="javascript:void(0)")
-                img(src="assets/images/icons/slider-arrow.png" alt="")
+                .icon.icon-slider-arrow
+                //- img(src="assets/images/icons/slider-arrow.png" alt="")
         .slider__arrow-right.js-slider-right
             a(href="javascript:void(0)")
-                img(src="assets/images/icons/slider-arrow.png" alt="").rotate180
+                .icon.icon-slider-arrow.rotate180
+                //- img(src="assets/images/icons/slider-arrow.png" alt="").rotate180
 
 mixin ciberCommunity(text, text2, text3)
     .about__logo
@@ -82,5 +84,6 @@ mixin ciberCommunity(text, text2, text3)
 
 mixin socItem(name)
     a(href="#").club__soc-item
-        img(src=`assets/images/icons/soc-${name}.png` alt="")
+        .icon(class=`icon-soc-${name}`)
+        //- img(src=`assets/images/icons/soc-${name}.png` alt="")
         
