@@ -13,7 +13,6 @@ footer.footer
                 .footer__requisites-close
                     a(href="javascript:void(0)").js-requisites-close
                         .icon.icon-close
-                        //- img(src="assets/images/icons/close.png", alt="")
     .footer__content
         .footer__main
             .container
@@ -22,36 +21,33 @@ footer.footer
                     .footer__contacts-item
                         .footer__contacts-item--image
                             .icon.icon-point
-                            //- img(src="assets/images/icons/point.png" alt="")
                         .footer__contacts-item--text
                             | Москва, <br> улица Архитектора Власова, 55
                     .footer__contacts-item
                         .footer__contacts-item--image
                             .icon.icon-phone-red
-                            //- img(src="assets/images/icons/phone-red.png" alt="")
                         .footer__contacts-item--text
                             a(href="tel:8-499-288-27-35") 8-499-288-27-35
                     .footer__contacts-item
                         .footer__contacts-item--image
                             .icon.icon-mail
-                            //- img(src="assets/images/icons/mail.png" alt="")
                         .footer__contacts-item--text
                             a(href="mailto:info@cyberx-franchise.ru") info@cyberx-franchise.ru
                     .footer__contacts-soc
                         a(href="#")
                             .icon.icon-soc
-                            //- img(src="assets/images/icons/soc.png" alt="")
                 .footer__feedback
                     h4 Обратная связь
                     form.footer__form.ajax_form(action="#" method="post")
                         .form-inputs-col
                             input(type="text" id="form-name" name="name" placeholder="ФИО" value="")
-                            input(type="email" class="is-error" id="form-email" name="email" placeholder="EMAIL" value="")
+                            input(type="email" id="form-email" name="email" placeholder="EMAIL" value="")
                         .form-inputs-col
                             input(type="tel" class="phone_mask" id="form-phone" name="phone" placeholder="Номер вашего телефона"  value="")
-                            textarea(type="text" id="fort-text" name="text" placeholder="ТЕКСТ СООБЩЕНИЯ") 
+                            <textarea type="text" id="fort-text" name="text" placeholder="ТЕКСТ СООБЩЕНИЯ"></textarea>
                         .form-submit
-                            button(type="submit" class="is-disabled") Отправить
+                            button(type="submit" class="is-disabled") 
+                                span Отправить
         .footer__bottom
             .container
                 .footer__copy
