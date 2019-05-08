@@ -4,7 +4,7 @@ section.services
     .services__title
         h1 Услуги
     .services__content
-        .services__content-wrapp
+        .services__content-wrapp.js-services-slider
             .services__items-left
                 .services__item
                     .services__item-inner(style="background-image: url(assets/images/services-1.png);" alt="")
@@ -32,8 +32,10 @@ section.services
                         .services__item-title проведение турниров
                     .services__item-num(data-num="6") 6
     .services__arrow-left
-        a(href="#")
-            img(src="assets/images/icons/formats-arrow.png" alt="")
+        a(href="#").js-services-slider-left
+            .icon.icon-formats-arrow
+            //- img(src="assets/images/icons/formats-arrow.png" alt="")
     .services__arrow-right
-        a(href="#")
-            img(src="assets/images/icons/formats-arrow.png" alt="").rotate180
+        a(href="#").js-services-slider-right
+            .icon.icon-formats-arrow.rotate180
+            //- img(src="assets/images/icons/formats-arrow.png" alt="").rotate180

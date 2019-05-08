@@ -89,11 +89,11 @@
                 .news__item-actions {
                     background-image: linear-gradient(to bottom, #e1394a, #b01a28);
     
-                    img:last-child {
+                    .icon:last-child {
                         display: none;
                     }
     
-                    img:first-child {
+                    .icon:first-child {
                         display: inline-block;
                     }
                 }
@@ -161,8 +161,12 @@
         border-radius: 3px;
         background-color: #bf1e2e;
 
-        img {
+        .icon {
             margin: 0 0 4px;
+        }
+
+        @include mq(1199) {
+            margin: 0 8px 0 0;
         }
     }
 
@@ -292,7 +296,7 @@
         text-align: center;
         margin: 0 0 0 10px;
 
-        img {
+        .icon {
             margin: 6px 0 0;
         }
     }
@@ -308,11 +312,11 @@
         border: 1px solid #bf1e2e;
         margin: 0 0 0 10px;
 
-        img {
+        .icon {
             margin: 2px 0 0;
         }
 
-        img:first-child {
+        .icon:first-child {
             display: none;
         }
 
@@ -320,7 +324,7 @@
             width: 40px;
             height: 40px;
 
-            img {
+            .icon {
                 margin: 1px 0 0;
             }
         }

@@ -2,7 +2,8 @@ mixin headerBlock(nav, current, headerClass)
     .mob-menu.js-mob-menu
         .mob-menu__close
             a(href="javascript:void(0)").js-mob-menu-close
-                img(src="assets/images/icons/close.png", alt="")
+                .icon.icon-close
+                //- img(src="assets/images/icons/close.png", alt="")
         ul.mob-menu__lists
             each item in nav
                 if item.url === current
@@ -15,7 +16,8 @@ mixin headerBlock(nav, current, headerClass)
         .header__inner
             .header__mobile
                 a(href="javascript:void(0)").js-mob-menu-open
-                    img(src="assets/images/icons/menu.png", alt="")
+                    .icon.icon-menu
+                    //- img(src="assets/images/icons/menu.png", alt="")
             .header__logo
                 a(href="/")
                     img(src="assets/images/logo.png" alt="")
@@ -29,7 +31,8 @@ mixin headerBlock(nav, current, headerClass)
                             a(href=item.url)= item.name
             .header__phone
                 a.phone(href="javascript:void(0)").js-popup-open
-                    img(src="assets/images/icons/phone-icon.png" title="Заказать звонок" alt="")
+                    .icon.icon-phone-icon(title="Заказать звонок" )
+                    //- img(src="assets/images/icons/phone-icon.png" title="Заказать звонок" alt="")
                 a(href="tel:+74992882735")
                     | 8 499 288 27 35
         .header__decor

@@ -59,7 +59,7 @@
         
         @include mq(749) {
             width: 600vw;
-            // transform: translate3d(-83.33%, 0, 0);
+            transition: transform 0.5s;
         }
     }
 

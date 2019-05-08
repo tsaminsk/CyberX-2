@@ -32,19 +32,18 @@
         &:after {
             content: '';
             position: absolute;
-            top: 0;
+            top: 3px;
             right: -25px;
-            width: 20px;
-            height: 100%;
-            background: url(./../images/icons/crumbs-arrow-white.png) center center no-repeat;
+            @include sprite($crumbs-arrow-white);
         }
 
         @include mq(1199) {
             margin: 0 20px 0 0;
             
             &:after {
-                right: -23px;
-                background-size: 70%;
+                top: 2px;
+                right: -21px;
+                transform: scale(0.7);
             }
         }
 
@@ -52,7 +51,8 @@
             margin: 0 18px 0 0;
             
             &:after {
-                right: -20px;
+                top: 1px;
+                right: -18px;
             }
         }
     }
@@ -76,7 +76,7 @@
 
     &.bread-crumbs-light {
         .bread-crumbs__item:after {
-            background-image: url(./../images/icons/crumbs-arrow.png);
+            @include sprite($crumbs-arrow);
         }
 
         .bread-crumbs__item:not(:first-child) {

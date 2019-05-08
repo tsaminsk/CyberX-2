@@ -179,11 +179,9 @@
         display: none;
 
         @include mq(1199) {
+            display: inline-block;
             position: absolute;
             top: 214px;
-            display: inline-block;
-            vertical-align: top;
-            width: 45px;
         }
 
         @include mq(749) {
@@ -524,25 +522,25 @@
     }
 
     &__slider-arrow-left,
-    &__sliderarrow-right {
+    &__slider-arrow-right {
         position: absolute;
         top: 210px;
         display: inline-block;
         vertical-align: top;
         width: 50px;
 
-        a img:last-child {
+        a .icon:last-child {
             display: none;
         }
 
         @include mq(1199) {
             top: 135px;
 
-            a img:last-child {
+            a .icon:last-child {
                 display: inline-block;
             }
 
-            a img:first-child {
+            a .icon:first-child {
                 display: none;
             }
         }
@@ -556,7 +554,7 @@
         }
     }
 
-    &__sliderarrow-right {
+    &__slider-arrow-right {
         right: 28px;
 
         @include mq(1199) {
@@ -645,9 +643,11 @@
 
         @include mq(1199) {
             height: 74px;
-
-            img {
-                height: 71px;
+            
+            .icon {
+                transform: scale(0.65);
+                transform-origin: (50%, 0);
+                margin: -21px 0 0;
             }
         }
     }

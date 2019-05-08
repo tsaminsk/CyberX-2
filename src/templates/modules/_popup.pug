@@ -5,7 +5,6 @@
             form.ajax_form.popup__form(action="#" method="post")
                 span.error_name
                 input(type="text" id="popup-name" name="name" placeholder="ФИО" value="")
-                //.is-error
                 span.error_phone
                 input(type="tel" id="popup-phone" class="phone_mask" name="phone" placeholder="Телефон" value="")
                 span.error_email
@@ -15,5 +14,4 @@
                 input(type="hidden" name="af_action" value="fc6aabaf83f891f0d1212263ac1490c2")
         .popup__close
             a(href="javascript:void(0)").js-popup-close
-                img(src="assets/images/icons/close.png", alt="")
-            //- .icon icon-close</div>
+                .icon.icon-close

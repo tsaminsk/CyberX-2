@@ -5,17 +5,7 @@ var clubsItems;
 
 window.onload = function () {
 
-    if (document.querySelector('.about') != null) {        
-        setSliderAbout('.js-formats-slider');
-        setSliderAbout('.js-preferens-slider');
-        setSliderAbout('.js-photos-slider');
-
-        $(window).resize(function () {
-            setSliderAbout('.js-formats-slider');
-            setSliderAbout('.js-preferens-slider');
-        });
-    }
-
+    // все страницы
     $('.js-mob-menu-open').on('click', function (event) {
         event.preventDefault();
         $('.js-mob-menu').fadeIn(500);
@@ -38,10 +28,6 @@ window.onload = function () {
 
     $('.phone_mask ').mask("+7(999) 999-99-99");
 
-    setNumbersAnimaition(".about__numbers", 4, "#js-num");
-
-    setNumbersAnimaition(".club__gadgets", 3, "#js-club-num");
-
     if ($('.js-requisites')) {
         $('.js-requisites-open').on('click', function (event) {
             event.preventDefault();
@@ -59,6 +45,29 @@ window.onload = function () {
         ymaps.ready(init(coords, clubs, mapParams));
     }
 
+    // главная
+    if (document.querySelector('.about') != null) {
+        setSliderAbout('.js-formats-slider');
+        setSliderAbout('.js-preferens-slider');
+        setSliderAbout('.js-photos-slider');
+
+        $(window).resize(function () {
+            setSliderAbout('.js-formats-slider');
+            setSliderAbout('.js-preferens-slider');
+        });
+    }
+
+    if (document.querySelector('.services') != null) {
+        setServicesSlider();
+
+        $(window).resize(function () {
+            setServicesSlider();
+        });
+    }
+
+    setNumbersAnimaition(".about__numbers", 4, "#js-num");
+
+    //страница клубов
     if ($(document).find('.clubs')) {
         setClubsSelect();
         setClubsItems();
@@ -112,6 +121,9 @@ window.onload = function () {
             $(arrPagination[n]).addClass('is-active');
         }
     }
+
+    // страница клуба
+    setNumbersAnimaition(".club__gadgets", 3, "#js-club-num");
 
     // блок новости 
     $('.js-news-items').find('a.news__item-more').on('click', function(event) {
