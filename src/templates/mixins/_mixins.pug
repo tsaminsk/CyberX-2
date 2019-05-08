@@ -3,7 +3,6 @@ mixin headerBlock(nav, current, headerClass)
         .mob-menu__close
             a(href="javascript:void(0)").js-mob-menu-close
                 .icon.icon-close
-                //- img(src="assets/images/icons/close.png", alt="")
         ul.mob-menu__lists
             each item in nav
                 if item.url === current
@@ -17,7 +16,6 @@ mixin headerBlock(nav, current, headerClass)
             .header__mobile
                 a(href="javascript:void(0)").js-mob-menu-open
                     .icon.icon-menu
-                    //- img(src="assets/images/icons/menu.png", alt="")
             .header__logo
                 a(href="/")
                     img(src="assets/images/logo.png" alt="")
@@ -32,7 +30,6 @@ mixin headerBlock(nav, current, headerClass)
             .header__phone
                 a.phone(href="javascript:void(0)").js-popup-open
                     .icon.icon-phone-icon(title="Заказать звонок" )
-                    //- img(src="assets/images/icons/phone-icon.png" title="Заказать звонок" alt="")
                 a(href="tel:+74992882735")
                     | 8 499 288 27 35
         .header__decor
@@ -68,11 +65,9 @@ mixin slider(image, type, className)
         .slider__arrow-left.js-slider-left
             a(href="javascript:void(0)")
                 .icon.icon-slider-arrow
-                //- img(src="assets/images/icons/slider-arrow.png" alt="")
         .slider__arrow-right.js-slider-right
             a(href="javascript:void(0)")
                 .icon.icon-slider-arrow.rotate180
-                //- img(src="assets/images/icons/slider-arrow.png" alt="").rotate180
 
 mixin ciberCommunity(text, text2, text3)
     .about__logo
@@ -88,5 +83,4 @@ mixin ciberCommunity(text, text2, text3)
 mixin socItem(name)
     a(href="#").club__soc-item
         .icon(class=`icon-soc-${name}`)
-        //- img(src=`assets/images/icons/soc-${name}.png` alt="")
         

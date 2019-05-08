@@ -71,7 +71,7 @@
     &__gallery {
         position: relative;
         height: 926px;
-        background: url(./../images/club-gallery-bg.png) center center no-repeat;
+        background: url(./../images/club-gallery-bg.jpg) center center no-repeat;
         background-size: cover;
 
         @include mq(1199) {
@@ -138,6 +138,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             width: 3000px;
+            transition: transform 0.5s;
         }
 
         &__gallery-item,
@@ -320,7 +321,7 @@
 
     &__price {
         height: 580px;
-        background: url(./../images/club-price-bg.png) center center no-repeat;
+        background: url(./../images/club-price-bg.jpg) center center no-repeat;
         background-size: cover;
         color: #fff;
 

@@ -57,14 +57,6 @@ window.onload = function () {
         });
     }
 
-    if (document.querySelector('.services') != null) {
-        setServicesSlider();
-
-        $(window).resize(function () {
-            setServicesSlider();
-        });
-    }
-
     setNumbersAnimaition(".about__numbers", 4, "#js-num");
 
     //страница клубов
@@ -123,7 +115,23 @@ window.onload = function () {
     }
 
     // страница клуба
-    setNumbersAnimaition(".club__gadgets", 3, "#js-club-num");
+    if (document.querySelector('.club') != null) {
+        setClubSlider();
+        setNumbersAnimaition(".club__gadgets", 3, "#js-club-num");
+        
+        $(window).resize(function () {
+            setClubSlider();
+        });
+    }
+
+    // страница услуги
+    if (document.querySelector('.services') != null) {
+        setServicesSlider();
+
+        $(window).resize(function () {
+            setServicesSlider();
+        });
+    }
 
     // блок новости 
     $('.js-news-items').find('a.news__item-more').on('click', function(event) {
